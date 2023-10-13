@@ -23,6 +23,8 @@ I am currently a second-year PhD student at the Center for Information and Langu
 
 Before pursuing my PhD degree, I obtained my master's degree in *Data Engineering and Analytics* at Technical University of Munich (**TUM**), München, and my bachelor's degree in *Computer Science and Technology* at Southwest University (**SWU**), Chongqing.  
 
+Email: yihong\[at\]cis\[dot\]lmu\[dot\]de  
+
 
 **Current research interests**:  
 - multilinguality
