@@ -28,7 +28,7 @@ Email: yihong\[at\]cis\[dot\]lmu\[dot\]de
 
 **Current research interests**:  
 - multilinguality
-- language language model
+- large language models
 - parameter-efficient transfer learning
 - machine translation 
 
