@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am staring my PhD at CIS, LMU Munich!
+I am starting my PhD at CIS, LMU Munich!
