@@ -19,7 +19,16 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am currently a second-year PhD student at the Center for Information and Language Processing (CIS) of University of Munich (LMU Munich), München, under Prof. Dr. Hinrich Schütze's supervision.
+I am currently a second-year PhD student at the Center for Information and Language Processing (**CIS**) of University of Munich (**LMU Munich**), München, under Prof. Dr. Hinrich Schütze's supervision, focusing on natural language processing (**NLP**) and computational linguistics (**CL**).  
+
+Before pursuing my PhD degree, I obtained my master's degree in *Data Engineering and Analytics* at Technical University of Munich (**TUM**), München, and my bachelor's degree in *Computer Science and Technology* at Southwest University (**SWU**), Chongqing.  
+
+
+**Current research interests**:  
+- multilinguality
+- language language model
+- parameter-efficient transfer learning
+- machine translation 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
