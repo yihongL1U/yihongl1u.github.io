@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-One paper is accepted to IWSLT 2022 (in ACL 2023)!
+One paper is accepted to IWSLT 2023 (in ACL 2023)!

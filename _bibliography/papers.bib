@@ -3,14 +3,27 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{liu2023ofa,
+   title={OFA: A Framework of Initializing Unseen Subword Embeddings for Efficient Large-scale Multilingual Continued Pretraining},
+   author={Liu, Yihong and Lin, Peiqin and Wang, Mingyang and Sch{\"u}tze, Hinrich},
+   journal={arXiv preprint arXiv:2311.08849},
+   year={2023},
+   abstract={Pretraining multilingual language models from scratch requires considerable computational resources and substantial training data. Therefore, a more efficient method is to adapt existing pretrained language models (PLMs) to new languages via vocabulary extension and continued pretraining. However, this method usually randomly initializes the embeddings of new subwords and introduces substantially more embedding parameters to the language model, thus weakening the efficiency. To address these issues, we propose a novel framework: \textbf{O}ne \textbf{F}or \textbf{A}ll (\textbf{\textsc{Ofa}}), which wisely initializes the embeddings of unseen subwords from target languages and thus can adapt a PLM to multiple languages efficiently and effectively. \textsc{Ofa} takes advantage of external well-aligned multilingual word embeddings and injects the alignment knowledge into the new embeddings. In addition, \textsc{Ofa} applies matrix factorization and replaces the cumbersome embeddings with two lower-dimensional matrices, which significantly reduces the number of parameters while not sacrificing the performance. Through extensive experiments, we show models initialized by \textsc{Ofa} are efficient and outperform several baselines. \textsc{Ofa} not only accelerates the convergence of continued pretraining, which is friendly to a limited computation budget, but also improves the zero-shot crosslingual transfer on a wide range of downstream tasks. We make our code and models publicly available.},
+   selected={true},
+   abbr = {arXiv 2023}
+}
 
-@article{liu2023crosslingual,
-  title={Crosslingual Transfer Learning for Low-Resource Languages Based on Multilingual Colexification Graphs},
-  author={Liu, Yihong and Ye, Haotian and Weissweiler, Leonie and Sch{\"u}tze, Hinrich},
-  journal={arXiv preprint arXiv:2305.12818},
-  year={2023},
-  arxiv={2305.12818},
-  abstract={Colexification in comparative linguistics refers to the phenomenon of a lexical form conveying two or more distinct meanings. In this paper, we propose simple and effective methods to build multilingual graphs from colexification patterns: ColexNet and ColexNet+. ColexNet's nodes are concepts and its edges are colexifications. In ColexNet+, concept nodes are in addition linked through intermediate nodes, each representing an ngram in one of 1,334 languages. We use ColexNet+ to train high-quality multilingual embeddings $\overrightarrow{\mbox{ColexNet+}}$ that are well-suited for transfer learning scenarios. Existing work on colexification patterns relies on annotated word lists. This limits scalability and usefulness in NLP. In contrast, we identify colexification patterns of more than 2,000 concepts across 1,335 languages directly from an unannotated parallel corpus. In our experiments, we first show that ColexNet has a high recall on CLICS, a dataset of crosslingual colexifications. We then evaluate $\overrightarrow{\mbox{ColexNet+}}$ on roundtrip translation, verse retrieval and verse classification and show that our embeddings surpass several baselines in a transfer learning setting. This demonstrates the benefits of colexification for multilingual NLP.}
+@inproceedings{liu2023crosslingual,
+    title = "Crosslingual Transfer Learning for Low-Resource Languages Based on Multilingual Colexification Graphs",
+    author={Liu, Yihong and Ye, Haotian and Weissweiler, Leonie and Renhao, Pei and Sch{\"u}tze, Hinrich},
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
+    month = dec,
+    year = "2023",
+    publisher = "Association for Computational Linguistics",
+    url = "https://arxiv.org/abs/2305.12818",
+    abstract={Colexification in comparative linguistics refers to the phenomenon of a lexical form conveying two or more distinct meanings. In this paper, we propose simple and effective methods to build multilingual graphs from colexification patterns: ColexNet and ColexNet+. ColexNet's nodes are concepts and its edges are colexifications. In ColexNet+, concept nodes are in addition linked through intermediate nodes, each representing an ngram in one of 1,334 languages. We use ColexNet+ to train high-quality multilingual embeddings $\overrightarrow{\mbox{ColexNet+}}$ that are well-suited for transfer learning scenarios. Existing work on colexification patterns relies on annotated word lists. This limits scalability and usefulness in NLP. In contrast, we identify colexification patterns of more than 2,000 concepts across 1,335 languages directly from an unannotated parallel corpus. In our experiments, we first show that ColexNet has a high recall on CLICS, a dataset of crosslingual colexifications. We then evaluate $\overrightarrow{\mbox{ColexNet+}}$ on roundtrip translation, verse retrieval and verse classification and show that our embeddings surpass several baselines in a transfer learning setting. This demonstrates the benefits of colexification for multilingual NLP.},
+    selected={true},
+    abbr = {EMNLP 2023}
 }
 
 @article{ye2023study,
@@ -19,7 +32,8 @@
   journal={arXiv preprint arXiv:2305.13401},
   year={2023},
   arxiv={2305.13401},
-  abstract={An interesting line of research in natural language processing (NLP) aims to incorporate linguistic typology to bridge linguistic diversity and assist the research of low-resource languages. While most works construct linguistic similarity measures based on lexical or typological features, such as word order and verbal inflection, recent work has introduced a novel approach to defining language similarity based on how they represent basic concepts, which is complementary to existing similarity measures. In this work, we study the conceptual similarity in detail and evaluate it extensively on a binary classification task.}
+  abstract={An interesting line of research in natural language processing (NLP) aims to incorporate linguistic typology to bridge linguistic diversity and assist the research of low-resource languages. While most works construct linguistic similarity measures based on lexical or typological features, such as word order and verbal inflection, recent work has introduced a novel approach to defining language similarity based on how they represent basic concepts, which is complementary to existing similarity measures. In this work, we study the conceptual similarity in detail and evaluate it extensively on a binary classification task.},
+  abbr = {arXiv 2023}
 }
 
 @inproceedings{liu-etal-2023-crosslingual,
@@ -40,7 +54,8 @@
     doi = "10.18653/v1/2023.acl-long.726",
     pages = "12969--13000",
     abstract = "Languages differ in how they divide up the world into concepts and words; e.g., in contrast to English, Swahili has a single concept for {`}belly{'} and {`}womb{'}. We investigate these differences in conceptualization across 1,335 languages by aligning concepts in a parallel corpus. To this end, we propose Conceptualizer, a method that creates a bipartite directed alignment graph between source language concepts and sets of target language strings. In a detailed linguistic analysis across all languages for one concept ({`}bird{'}) and an evaluation on gold standard data for 32 Swadesh concepts, we show that Conceptualizer has good alignment accuracy. We demonstrate the potential of research on conceptualization in NLP with two experiments. (1) We define crosslingual stability of a concept as the degree to which it has 1-1 correspondences across languages, and show that concreteness predicts stability. (2) We represent each language by its conceptualization pattern for 83 concepts, and define a similarity measure on these representations. The resulting measure for the conceptual similarity between two languages is complementary to standard genealogical, typological, and surface similarity measures. For four out of six language families, we can assign languages to their correct family based on conceptual similarity with accuracies between 54{\%} and 87{\%}",
-    selected={true}
+    selected={true},
+    abbr = {ACL 2023}
 }
 
 @inproceedings{liu-etal-2023-copying,
@@ -58,6 +73,7 @@
     doi = "10.18653/v1/2023.iwslt-1.48",
     pages = "491--502",
     abstract = "Although unsupervised neural machine translation (UNMT) has achieved success in many language pairs, the copying problem, i.e., directly copying some parts of the input sentence as the translation, is common among distant language pairs, especially when low-resource languages are involved. We find this issue is closely related to an unexpected copying behavior during online back-translation (BT). In this work, we propose a simple but effective training schedule that incorporates a language discriminator loss. The loss imposes constraints on the intermediate translation so that the translation is in the desired language. By conducting extensive experiments on different language pairs, including similar and distant, high and low-resource languages, we find that our method alleviates the copying problem, thus improving the translation performance on low-resource languages.",
+    abbr = {IWSLT 2023}
 }
 
 @inproceedings{liu-etal-2022-flow,
@@ -74,7 +90,8 @@
     doi = "10.18653/v1/2022.acl-long.89",
     pages = "1253--1266",
     abstract = "In this work, we propose a flow-adapter architecture for unsupervised NMT. It leverages normalizing flows to explicitly model the distributions of sentence-level latent representations, which are subsequently used in conjunction with the attention mechanism for the translation task. The primary novelties of our model are: (a) capturing language-specific sentence representations separately for each language using normalizing flows and (b) using a simple transformation of these latent representations for translating from one language to another. This architecture allows for unsupervised training of each language independently. While there is prior work on latent variables for supervised MT, to the best of our knowledge, this is the first work that uses latent variables and normalizing flows for unsupervised MT. We obtain competitive results on several unsupervised MT benchmarks.",
-    selected={true}
+    selected={true},
+    abbr = {ACL 2022}
 }
 
 @article{LIU2021101165,
@@ -88,5 +105,6 @@ doi = {https://doi.org/10.1016/j.csl.2020.101165},
 url = {https://www.sciencedirect.com/science/article/pii/S088523082030098X},
 author = {Yihong Liu and Wei Guan and Dongxu Lu and Xianchun Zou},
 keywords = {Label-embeddings, Label-oriented loss, Multi-LSTM, Sentence representations, Sentiment analysis},
-abstract = {Neural network methods which leverage word-embedding obtained from unsupervised learning models have been widely adopted in many natural language processing (NLP) tasks, including sentiment analysis and sentence classification. Existing sentence representation generation approaches which serve for classification tasks generally rely on complex deep neural networks but relatively simple loss functions, such as cross entropy loss function. These approaches cannot produce satisfactory separable sentence representations because the usage of cross entropy may ignore the sentiment and semantic information of the labels. To extract useful information from labels for improving the distinguishability of the obtained sentence representations, this paper proposes a label-oriented loss function. The proposed loss function takes advantage of the word-embeddings of labels to guide the production of meaningful sentence representations which serve for downstream classification tasks. Compared with existing end-to-end approaches, the evaluation experiments on several datasets illustrate that using the proposed loss function can achieve competitive and even better classification results.}
+abstract = {Neural network methods which leverage word-embedding obtained from unsupervised learning models have been widely adopted in many natural language processing (NLP) tasks, including sentiment analysis and sentence classification. Existing sentence representation generation approaches which serve for classification tasks generally rely on complex deep neural networks but relatively simple loss functions, such as cross entropy loss function. These approaches cannot produce satisfactory separable sentence representations because the usage of cross entropy may ignore the sentiment and semantic information of the labels. To extract useful information from labels for improving the distinguishability of the obtained sentence representations, this paper proposes a label-oriented loss function. The proposed loss function takes advantage of the word-embeddings of labels to guide the production of meaningful sentence representations which serve for downstream classification tasks. Compared with existing end-to-end approaches, the evaluation experiments on several datasets illustrate that using the proposed loss function can achieve competitive and even better classification results.},
+abbr = {Computer Speech & Language}
 }
