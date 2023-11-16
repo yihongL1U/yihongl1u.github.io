@@ -19,8 +19,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-[[Google Scholar]](https://scholar.google.com/citations?user=VjJUa5cAAAAJ&hl=en), [[GitHub]](https://github.com/yihongL1U)
-
+[[Google Scholar]](https://scholar.google.com/citations?user=VjJUa5cAAAAJ&hl=en), [[Semantic Scholar]](https://www.semanticscholar.org/author/Yihong-Liu/2107995084), [[GitHub]](https://github.com/yihongL1U)  
+  
+  
 I am currently a second-year PhD student at the Center for Information and Language Processing (**CIS**) of University of Munich (**LMU Munich**), München, under Prof. Dr. Hinrich Schütze's supervision, focusing on natural language processing (**NLP**) and computational linguistics (**CL**).  
 
 Before pursuing my PhD degree, I obtained my master's degree in *Data Engineering and Analytics* at Technical University of Munich (**TUM**), München, and my bachelor's degree in *Computer Science and Technology* at Southwest University (**SWU**), Chongqing.  
