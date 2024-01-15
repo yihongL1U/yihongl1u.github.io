@@ -3,6 +3,26 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{liu2024translico,
+    title={TransliCo: A Contrastive Learning Framework to Address the Script Barrier in Multilingual Pretrained Language Models}, 
+    author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Schütze},
+    journal={arXiv preprint arXiv:2401.06620},
+    year={2024},
+    arxiv={2401.06620},
+    abstract={There are 293 scripts representing over 7,000 languages in the written form. Due to various reasons, many closely related languages use different scripts, which poses difficulty for multilingual pretrained language models (mPLMs) in learning crosslingual knowledge through lexical overlap. As a result, mPLMs present a script barrier: representations from different scripts are located in different subspaces, which is a strong indicator of why crosslingual transfer involving languages of different scripts shows sub-optimal performance. To address this problem, we propose a simple framework TransliCo that contains Transliteration Contrastive Modeling (TCM) to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (Latn, in our case), which ensures uniformity in the representation space for different scripts. Using Glot500-m, an mPLM pretrained on over 500 languages, as our source model, we find-tune it on a small portion (5\%) of its training data, and refer to the resulting model as Furina. We show that Furina not only better aligns representations from distinct scripts but also outperforms the original Glot500-m on various crosslingual transfer tasks. Additionally, we achieve consistent improvement in a case study on the Indic group where the languages are highly related but use different scripts. We make our code and models publicly available.},
+    abbr = {arXiv 2024}
+}
+
+@article{ye2024mosecrot,
+  title={MoSECroT: Model Stitching with Static Word Embeddings for Crosslingual Zero-shot Transfer},
+  author={Ye, Haotian and Liu, Yihong and Ma, Chunlan and Sch{\"u}tze, Hinrich},
+  journal={arXiv preprint arXiv:2401.04821},
+  arxiv={2401.04821},
+  year={2024},
+  abstract={Transformer-based pre-trained language models (PLMs) have achieved remarkable performance in various natural language processing (NLP) tasks. However, pre-training such models can take considerable resources that are almost only available to high-resource languages. On the contrary, static word embeddings are easier to train in terms of computing resources and the amount of data required. In this paper, we introduce MoSECroT Model Stitching with Static Word Embeddings for Crosslingual Zero-shot Transfer), a novel and challenging task that is especially relevant to low-resource languages for which static word embeddings are available. To tackle the task, we present the first framework that leverages relative representations to construct a common space for the embeddings of a source language PLM and the static word embeddings of a target language. In this way, we can train the PLM on source-language training data and perform zero-shot transfer to the target language by simply swapping the embedding layer. However, through extensive experiments on two classification datasets, we show that although our proposed framework is competitive with weak baselines when addressing MoSECroT, it fails to achieve competitive results compared with some strong baselines. In this paper, we attempt to explain this negative result and provide several thoughts on possible improvement.},
+  abbr = {arXiv 2024}
+}
+
 @article{liu2023ofa,
    title={OFA: A Framework of Initializing Unseen Subword Embeddings for Efficient Large-scale Multilingual Continued Pretraining},
    author={Liu, Yihong and Lin, Peiqin and Wang, Mingyang and Sch{\"u}tze, Hinrich},
