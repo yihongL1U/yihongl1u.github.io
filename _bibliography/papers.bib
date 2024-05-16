@@ -10,7 +10,8 @@
     year={2024},
     arxiv={2401.06620},
     abstract={There are 293 scripts representing over 7,000 languages in the written form. Due to various reasons, many closely related languages use different scripts, which poses difficulty for multilingual pretrained language models (mPLMs) in learning crosslingual knowledge through lexical overlap. As a result, mPLMs present a script barrier: representations from different scripts are located in different subspaces, which is a strong indicator of why crosslingual transfer involving languages of different scripts shows sub-optimal performance. To address this problem, we propose a simple framework TransliCo that contains Transliteration Contrastive Modeling (TCM) to fine-tune an mPLM by contrasting sentences in its training data and their transliterations in a unified script (Latn, in our case), which ensures uniformity in the representation space for different scripts. Using Glot500-m, an mPLM pretrained on over 500 languages, as our source model, we find-tune it on a small portion (5\%) of its training data, and refer to the resulting model as Furina. We show that Furina not only better aligns representations from distinct scripts but also outperforms the original Glot500-m on various crosslingual transfer tasks. Additionally, we achieve consistent improvement in a case study on the Indic group where the languages are highly related but use different scripts. We make our code and models publicly available.},
-    abbr = {arXiv 2024}
+    selected={true},
+    abbr = {ACL 2024}
 }
 
 @article{ye2024mosecrot,
@@ -113,7 +114,6 @@
     doi = "10.18653/v1/2022.acl-long.89",
     pages = "1253--1266",
     abstract = "In this work, we propose a flow-adapter architecture for unsupervised NMT. It leverages normalizing flows to explicitly model the distributions of sentence-level latent representations, which are subsequently used in conjunction with the attention mechanism for the translation task. The primary novelties of our model are: (a) capturing language-specific sentence representations separately for each language using normalizing flows and (b) using a simple transformation of these latent representations for translating from one language to another. This architecture allows for unsupervised training of each language independently. While there is prior work on latent variables for supervised MT, to the best of our knowledge, this is the first work that uses latent variables and normalizing flows for unsupervised MT. We obtain competitive results on several unsupervised MT benchmarks.",
-    selected={true},
     abbr = {ACL 2022}
 }
 
