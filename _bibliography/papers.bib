@@ -3,6 +3,16 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{liu2024transmi,
+    title={TransMI: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data}, 
+    author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Schütze},
+    journal={arXiv preprint arXiv:2405.09913},
+    year={2024},
+    arxiv={2405.09913},
+    abstract={Transliterating related languages that use different scripts into a common script shows effectiveness in improving crosslingual transfer in downstream tasks. However, this methodology often makes pretraining a model from scratch unavoidable, as transliteration brings about new subwords not covered in existing multilingual pretrained language models (mPLMs). This is not desired because it takes a lot of computation budget for pretraining. A more promising way is to make full use of available mPLMs. To this end, this paper proposes a simple but effective framework: Transliterate-Merge-Initialize (TransMI), which can create a strong baseline well-suited for data that is transliterated into a common script by exploiting an mPLM and its accompanied tokenizer. TransMI has three stages: (a) transliterate the vocabulary of an mPLM into a common script; (b) merge the new vocabulary with the original vocabulary; and (c) initialize the embeddings of the new subwords. We applied TransMI to three recent strong mPLMs, and our experiments demonstrate that TransMI not only preserves their ability to handle non-transliterated data, but also enables the models to effectively process transliterated data: the results show a consistent improvement of 3% to 34%, varying across different models and tasks. We make our code and models publicly available.},
+    abbr = {arXiv 2024}
+}
+
 @article{liu2024translico,
     title={TransliCo: A Contrastive Learning Framework to Address the Script Barrier in Multilingual Pretrained Language Models}, 
     author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Schütze},
