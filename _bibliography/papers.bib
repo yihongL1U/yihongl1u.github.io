@@ -36,29 +36,48 @@
   abbr = {arXiv 2024}
 }
 
-@inproceedings{liu2023ofa,
-   title={OFA: A Framework of Initializing Unseen Subword Embeddings for Efficient Large-scale Multilingual Continued Pretraining},
-   author={Liu, Yihong and Lin, Peiqin and Wang, Mingyang and Sch{\"u}tze, Hinrich},
-   booktitle = "Findings of the Association for Computational Linguistics: NAACL 2024",
-   month = jun,
-   year={2024},
-   publisher = "Association for Computational Linguistics",
-   url = "https://arxiv.org/abs/2311.08849",
-   abstract={Pretraining multilingual language models from scratch requires considerable computational resources and substantial training data. Therefore, a more efficient method is to adapt existing pretrained language models (PLMs) to new languages via vocabulary extension and continued pretraining. However, this method usually randomly initializes the embeddings of new subwords and introduces substantially more embedding parameters to the language model, thus weakening the efficiency. To address these issues, we propose a novel framework: \textbf{O}ne \textbf{F}or \textbf{A}ll (\textbf{\textsc{Ofa}}), which wisely initializes the embeddings of unseen subwords from target languages and thus can adapt a PLM to multiple languages efficiently and effectively. \textsc{Ofa} takes advantage of external well-aligned multilingual word embeddings and injects the alignment knowledge into the new embeddings. In addition, \textsc{Ofa} applies matrix factorization and replaces the cumbersome embeddings with two lower-dimensional matrices, which significantly reduces the number of parameters while not sacrificing the performance. Through extensive experiments, we show models initialized by \textsc{Ofa} are efficient and outperform several baselines. \textsc{Ofa} not only accelerates the convergence of continued pretraining, which is friendly to a limited computation budget, but also improves the zero-shot crosslingual transfer on a wide range of downstream tasks. We make our code and models publicly available.},
-   selected={true},
+@inproceedings{liu-etal-2024-ofa,
+    title = "{OFA}: A Framework of Initializing Unseen Subword Embeddings for Efficient Large-scale Multilingual Continued Pretraining",
+    author = "Liu, Yihong  and
+      Lin, Peiqin  and
+      Wang, Mingyang  and
+      Sch{\"u}tze, Hinrich",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2024",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.findings-naacl.68",
+    pages = "1067--1097",
+    abstract = "Instead of pretraining multilingual language models from scratch, a more efficient method is to adapt existing pretrained language models (PLMs) to new languages via vocabulary extension and continued pretraining. However, this method usually randomly initializes the embeddings of new subwords and introduces substantially more embedding parameters to the model, thus weakening the efficiency. To address these issues, we propose a novel framework: $\textbf{O}$ne $\textbf{F}$or $\textbf{A}$ll ($\textbf{OFA}$), which wisely initializes the embeddings of unseen subwords and thus can adapt a PLM to multiple languages efficiently and effectively. OFA takes advantage of external well-aligned multilingual static word vectors and injects the alignment knowledge into the subword embeddings. In addition, OFA applies matrix factorization and replaces the cumbersome embeddings with two lower-dimensional matrices, which largely reduces the number of parameters. We show OFA accelerates the convergence of continued pretraining, which is environmentally friendly as much fewer carbon footprints are generated. Through extensive experiments, we demonstrate OFA can achieve competitive or better performance than default continued pretraining baselines on a wide range of crosslingual downstream tasks. We make our code and models publicly available.",
+    selected={true},
    abbr = {NAACL 2024},
    code = {https://github.com/cisnlp/ofa}
 }
 
-@inproceedings{liu2023crosslingual,
+
+@inproceedings{liu-etal-2023-crosslingual-transfer,
     title = "Crosslingual Transfer Learning for Low-Resource Languages Based on Multilingual Colexification Graphs",
-    author={Liu, Yihong and Ye, Haotian and Weissweiler, Leonie and Renhao, Pei and Sch{\"u}tze, Hinrich},
+    author = "Liu, Yihong  and
+      Ye, Haotian  and
+      Weissweiler, Leonie  and
+      Pei, Renhao  and
+      Sch{\"u}tze, Hinrich",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
     booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
     month = dec,
     year = "2023",
+    address = "Singapore",
     publisher = "Association for Computational Linguistics",
-    url = "https://arxiv.org/abs/2305.12818",
-    abstract={Colexification in comparative linguistics refers to the phenomenon of a lexical form conveying two or more distinct meanings. In this paper, we propose simple and effective methods to build multilingual graphs from colexification patterns: ColexNet and ColexNet+. ColexNet's nodes are concepts and its edges are colexifications. In ColexNet+, concept nodes are in addition linked through intermediate nodes, each representing an ngram in one of 1,334 languages. We use ColexNet+ to train high-quality multilingual embeddings $\overrightarrow{\mbox{ColexNet+}}$ that are well-suited for transfer learning scenarios. Existing work on colexification patterns relies on annotated word lists. This limits scalability and usefulness in NLP. In contrast, we identify colexification patterns of more than 2,000 concepts across 1,335 languages directly from an unannotated parallel corpus. In our experiments, we first show that ColexNet has a high recall on CLICS, a dataset of crosslingual colexifications. We then evaluate $\overrightarrow{\mbox{ColexNet+}}$ on roundtrip translation, verse retrieval and verse classification and show that our embeddings surpass several baselines in a transfer learning setting. This demonstrates the benefits of colexification for multilingual NLP.},
+    url = "https://aclanthology.org/2023.findings-emnlp.562",
+    doi = "10.18653/v1/2023.findings-emnlp.562",
+    pages = "8376--8401",
+    abstract = "In comparative linguistics, colexification refers to the phenomenon of a lexical form conveying two or more distinct meanings. Existing work on colexification patterns relies on annotated word lists, limiting scalability and usefulness in NLP. In contrast, we identify colexification patterns of more than 2,000 concepts across 1,335 languages directly from an unannotated parallel corpus. We then propose simple and effective methods to build multilingual graphs from the colexification patterns: \textbf{ColexNet} and \textbf{ColexNet+}. ColexNet{'}s nodes are concepts and its edges are colexifications. In ColexNet+, concept nodes are additionally linked through intermediate nodes, each representing an ngram in one of 1,334 languages. We use ColexNet+ to train $\overrightarrow{\mbox{ColexNet+}}$, high-quality multilingual embeddings that are well-suited for transfer learning. In our experiments, we first show that ColexNet achieves high recall on CLICS, a dataset of crosslingual colexifications. We then evaluate $\overrightarrow{\mbox{ColexNet+}}$ on roundtrip translation, sentence retrieval and sentence classification and show that our embeddings surpass several transfer learning baselines. This demonstrates the benefits of using colexification as a source of information in multilingual NLP.",
     selected={true},
     abbr = {EMNLP 2023},
     code = {https://github.com/cisnlp/ColexificationNet}
