@@ -3,6 +3,28 @@
 
 @string{aps = {American Physical Society,}}
 
+
+@article{ma2024exploring,
+  title={Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-Latin Scripts},
+  author={Ma, Chunlan and Liu, Yihong and Ye, Haotian and Sch{\"u}tze, Hinrich},
+  journal={arXiv preprint arXiv:2407.02320},
+  year={2024},
+  arxiv={2407.02320},
+  abstract={Decoder-only large language models (LLMs) excel in high-resource languages across various tasks through few-shot or even zero-shot in-context learning (ICL). However, their performance often does not transfer well to low-resource languages, especially those written in non-Latin scripts. Inspired by recent work that leverages transliteration in encoder-only models, we investigate whether transliteration is also effective in improving LLMs' performance for low-resource languages written in non-Latin scripts. To this end, we propose three prompt templates, where the target-language text is represented in (1) its original script, (2) Latin script, or (3) both. We apply these methods to several representative LLMs of different sizes on various tasks including text classification and sequential labeling. Our findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25%).},
+  abbr = {arXiv 2024}
+}
+
+@article{xhelili2024breaking,
+    title={Breaking the Script Barrier in Multilingual Pre-Trained Language Models with Transliteration-Based Post-Training Alignment}, 
+    author={Xhelili, Orgest and Liu, Yihong and Sch{\"u}tze, Hinrich},
+    journal={arXiv preprint arXiv:2406.19759},
+    year={2024},
+    arxiv={2406.19759},
+    abstract={TMultilingual pre-trained models (mPLMs) have shown impressive performance on cross-lingual transfer tasks. However, the transfer performance is often hindered when a low-resource target language is written in a different script than the high-resource source language, even though the two languages may be related or share parts of their vocabularies. Inspired by recent work that uses transliteration to address this problem, our paper proposes a transliteration-based post-pretraining alignment (PPA) method aiming to improve the cross-lingual alignment between languages using diverse scripts. We select two areal language groups, $\textbf{Mediterranean-Amharic-Farsi}$ and $\textbf{South+East Asian Languages}$, wherein the languages are mutually influenced but use different scripts. We apply our method to these language groups and conduct extensive experiments on a spectrum of downstream tasks. The results show that after PPA, models consistently outperform the original model (up to 50% for some tasks) in English-centric transfer. In addition, when we use languages other than English as sources in transfer, our method obtains even larger improvements. We will make our code and models publicly available at https://github.com/cisnlp/Transliteration-PPA},
+    abbr = {arXiv 2024},
+    code={https://github.com/cisnlp/Transliteration-PPA}
+}
+
 @article{liu2024transmi,
     title={TransMI: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data}, 
     author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Schütze},
