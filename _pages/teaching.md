@@ -7,13 +7,19 @@ nav: true
 nav_order: 5
 ---
 
-### Bachelor and Master thesis supervision
+## Bachelor and Master thesis supervision
 
-- ConceptExplorer: A Dynamic Frontend for Concept Visualization and Indexing with Django  
+- ConceptExplorer: A Dynamic Frontend for Concept Visualization and Indexing with Django (with Yuxuan Zahed)  
+- How Multilingual are Existing Multilingual Benchmark Datasets? A Systematic Investigation (with Jiahao Lu)  
+- Breaking the Script Barrier: Improving Cross-Lingual Transfer in Multilingual Models (with Orgest Xhelili, published in [EMNLP 2024](https://arxiv.org/pdf/2406.19759))  
+
+### Available topics:
+- [Why Crosslingual Alignment Fails for Better Crosslingual Transfer](https://cisnlp.github.io/thesis_proposals/2024/Yihong-2024-Project-3.pdf)  
+- [End-to-End Autoregressive Pixel Models of Generation in Text Space](https://cisnlp.github.io/thesis_proposals/2024/Yihong-2024-Project-4.pdf)  
   
 
 
-### Repetitorium zu Computerlinguistisches Arbeiten
+## Colloquium und Repetitorium zu Computerlinguistisches Arbeiten (Colloquium and Repetitorium on Computational Linguistics)
 
 SS 2023, 2024, Bachelor class  
   
@@ -21,12 +27,19 @@ SS 2023, 2024, Bachelor class
 In this class we will talk about useful topics for the preparation of a Bachelor thesis. Some companies will briefly present the work of a computer linguists in a their company and students will have to chance to get an overview of the tasks and projects they will be working on as computational linguists.
 
 
-### Einführung in die Computerlinguistik
+## Einführung in die Computerlinguistik (Introduction to Computational Linguistics)
 
-WS 2024, Bachelor class  
+WS 2023/2024, WS 2024/2025, Bachelor class  
   
   
 This class will be divided into two parts: the linguistics part and the statistics part. In the linguistic part, we will talk about topics such as Phonetics, Morphology, and Syntax. In the statistics part, we will talk about topics such as Naive Bayes, Machine Translation, and Parsing. The class aims to provide a foundational understanding of computational linguistics.
+
+## Deep Learning for Natural Language Processing
+
+WS 2024/2025, Master class  
+
+
+In this class, we will talk about the fundamental knowledge of deep learning and how this knowledge is applied in natural language processing. This class offers a theoretical part and a practical part. In the practical part, students will be given 5 projects from which the students can obtain some hands-on experience in how to use a deep learning framework (PyTorch) to define, train, finetune, and evaluate language models on different tasks.
 
 <!-- 
 For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
