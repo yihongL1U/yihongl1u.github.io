@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two paper are accepted to EMNLP 2024 Findings!
+Two paper are accepted to EMNLP 2024 findings!
