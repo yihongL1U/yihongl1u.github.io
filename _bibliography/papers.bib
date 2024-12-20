@@ -23,7 +23,7 @@
   year={2024},
   arxiv={2409.17326},
   abstract={Recent studies have shown that post-aligning multilingual pretrained language models (mPLMs) using alignment objectives on both original and transliterated data can improve crosslingual alignment. This improvement further leads to better crosslingual transfer performance. However, it remains unclear how and why a better crosslingual alignment is achieved, as this technique only involves transliterations, and does not use any parallel data. This paper attempts to explicitly evaluate the crosslingual alignment and identify the key elements in transliteration-based approaches that contribute to better performance. For this, we train multiple models under varying setups for two pairs of related languages: (1) Polish and Ukrainian and (2) Hindi and Urdu. To assess alignment, we define four types of similarities based on sentence representations. Our experiments show that adding transliterations alone improves the overall similarities, even for random sentence pairs. With the help of auxiliary alignment objectives, especially the contrastive objective, the model learns to distinguish matched from random pairs, leading to better alignments. However, we also show that better alignment does not always yield better downstream performance, suggesting that further research is needed to clarify the connection between alignment and performance.},
-  abbr = {arXiv 2024}
+  abbr = {COLING 2025}
 }
 
 @inproceedings{zhao-etal-2024-syntheval,
@@ -88,7 +88,7 @@
     year={2024},
     arxiv={2405.09913},
     abstract={Transliterating related languages that use different scripts into a common script shows effectiveness in improving crosslingual transfer in downstream tasks. However, this methodology often makes pretraining a model from scratch unavoidable, as transliteration brings about new subwords not covered in existing multilingual pretrained language models (mPLMs). This is not desired because it takes a lot of computation budget for pretraining. A more promising way is to make full use of available mPLMs. To this end, this paper proposes a simple but effective framework: Transliterate-Merge-Initialize (TransMI), which can create a strong baseline well-suited for data that is transliterated into a common script by exploiting an mPLM and its accompanied tokenizer. TransMI has three stages: (a) transliterate the vocabulary of an mPLM into a common script; (b) merge the new vocabulary with the original vocabulary; and (c) initialize the embeddings of the new subwords. We applied TransMI to three recent strong mPLMs, and our experiments demonstrate that TransMI not only preserves their ability to handle non-transliterated data, but also enables the models to effectively process transliterated data: the results show a consistent improvement of 3% to 34%, varying across different models and tasks. We make our code and models publicly available.},
-    abbr = {arXiv 2024},
+    abbr = {COLING 2025},
     code={https://github.com/cisnlp/TransMI}
 }
 
