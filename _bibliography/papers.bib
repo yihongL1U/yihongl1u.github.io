@@ -15,15 +15,33 @@
   code = {https://github.com/cisnlp/LangSAMP},
 }
 
-
-@article{liu2024transliterations,
-  title={How Transliterations Improve Crosslingual Alignment},
-  author={Liu, Yihong and Wang, Mingyang and Kargaran, Amir Hossein and Imani, Ayyoob and Xhelili, Orgest and Ye, Haotian and Ma, Chunlan and Yvon, Fran{\c{c}}ois and Sch{\"u}tze, Hinrich},
-  journal={arXiv preprint arXiv:2409.17326},
-  year={2024},
-  arxiv={2409.17326},
-  abstract={Recent studies have shown that post-aligning multilingual pretrained language models (mPLMs) using alignment objectives on both original and transliterated data can improve crosslingual alignment. This improvement further leads to better crosslingual transfer performance. However, it remains unclear how and why a better crosslingual alignment is achieved, as this technique only involves transliterations, and does not use any parallel data. This paper attempts to explicitly evaluate the crosslingual alignment and identify the key elements in transliteration-based approaches that contribute to better performance. For this, we train multiple models under varying setups for two pairs of related languages: (1) Polish and Ukrainian and (2) Hindi and Urdu. To assess alignment, we define four types of similarities based on sentence representations. Our experiments show that adding transliterations alone improves the overall similarities, even for random sentence pairs. With the help of auxiliary alignment objectives, especially the contrastive objective, the model learns to distinguish matched from random pairs, leading to better alignments. However, we also show that better alignment does not always yield better downstream performance, suggesting that further research is needed to clarify the connection between alignment and performance.},
-  abbr = {COLING 2025}
+@inproceedings{liu-etal-2025-transliterations,
+    title = "How Transliterations Improve Crosslingual Alignment",
+    author = {Liu, Yihong  and
+      Wang, Mingyang  and
+      Kargaran, Amir Hossein  and
+      ImaniGooghari, Ayyoob  and
+      Xhelili, Orgest  and
+      Ye, Haotian  and
+      Ma, Chunlan  and
+      Yvon, Fran{\c{c}}ois  and
+      Sch{\"u}tze, Hinrich},
+    editor = "Rambow, Owen  and
+      Wanner, Leo  and
+      Apidianaki, Marianna  and
+      Al-Khalifa, Hend  and
+      Eugenio, Barbara Di  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
+    month = jan,
+    year = "2025",
+    address = "Abu Dhabi, UAE",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.coling-main.165/",
+    pages = "2417--2433",
+    abstract = "Recent studies have shown that post-aligning multilingual pretrained language models (mPLMs) using alignment objectives on both original and transliterated data can improve crosslingual alignment. This improvement further leads to better crosslingual transfer performance. However, it remains unclear how and why a better crosslingual alignment is achieved, as this technique only involves transliterations, and does not use any parallel data. This paper attempts to explicitly evaluate the crosslingual alignment and identify the key elements in transliteration-based approaches that contribute to better performance. For this, we train multiple models under varying setups for two pairs of related languages: (1) Polish and Ukrainian and (2) Hindi and Urdu. To assess alignment, we define four types of similarities based on sentence representations. Our experimental results show that adding transliterations alone improves the overall similarities, even for random sentence pairs. With the help of auxiliary transliteration-based alignment objectives, especially the contrastive objective, the model learns to distinguish matched from random pairs, leading to better crosslingual alignment. However, we also show that better alignment does not always yield better downstream performance, suggesting that further research is needed to clarify the connection between alignment and performance.",
+    abbr = {COLING 2025},
+    code={https://github.com/cisnlp/Transliteration-PPA}
 }
 
 @inproceedings{zhao-etal-2024-syntheval,
@@ -49,7 +67,6 @@
     code = {https://github.com/Loreley99/SynthEval_CheckList}
 }
 
-
 @article{ma2024exploring,
   title={Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-Latin Scripts},
   author={Ma, Chunlan and Liu, Yihong and Ye, Haotian and Sch{\"u}tze, Hinrich},
@@ -59,7 +76,6 @@
   abstract={Decoder-only large language models (LLMs) excel in high-resource languages across various tasks through few-shot or even zero-shot in-context learning (ICL). However, their performance often does not transfer well to low-resource languages, especially those written in non-Latin scripts. Inspired by recent work that leverages transliteration in encoder-only models, we investigate whether transliteration is also effective in improving LLMs' performance for low-resource languages written in non-Latin scripts. To this end, we propose three prompt templates, where the target-language text is represented in (1) its original script, (2) Latin script, or (3) both. We apply these methods to several representative LLMs of different sizes on various tasks including text classification and sequential labeling. Our findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25%).},
   abbr = {arXiv 2024}
 }
-
 
 @inproceedings{xhelili-etal-2024-breaking,
     title = "Breaking the Script Barrier in Multilingual Pre-Trained Language Models with Transliteration-Based Post-Training Alignment",
@@ -81,13 +97,26 @@
     code={https://github.com/cisnlp/Transliteration-PPA}
 }
 
-@article{liu2024transmi,
-    title={TransMI: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data}, 
-    author={Yihong Liu and Chunlan Ma and Haotian Ye and Hinrich Schütze},
-    journal={arXiv preprint arXiv:2405.09913},
-    year={2024},
-    arxiv={2405.09913},
-    abstract={Transliterating related languages that use different scripts into a common script shows effectiveness in improving crosslingual transfer in downstream tasks. However, this methodology often makes pretraining a model from scratch unavoidable, as transliteration brings about new subwords not covered in existing multilingual pretrained language models (mPLMs). This is not desired because it takes a lot of computation budget for pretraining. A more promising way is to make full use of available mPLMs. To this end, this paper proposes a simple but effective framework: Transliterate-Merge-Initialize (TransMI), which can create a strong baseline well-suited for data that is transliterated into a common script by exploiting an mPLM and its accompanied tokenizer. TransMI has three stages: (a) transliterate the vocabulary of an mPLM into a common script; (b) merge the new vocabulary with the original vocabulary; and (c) initialize the embeddings of the new subwords. We applied TransMI to three recent strong mPLMs, and our experiments demonstrate that TransMI not only preserves their ability to handle non-transliterated data, but also enables the models to effectively process transliterated data: the results show a consistent improvement of 3% to 34%, varying across different models and tasks. We make our code and models publicly available.},
+@inproceedings{liu-etal-2025-transmi,
+    title = "{T}rans{MI}: A Framework to Create Strong Baselines from Multilingual Pretrained Language Models for Transliterated Data",
+    author = {Liu, Yihong  and
+      Ma, Chunlan  and
+      Ye, Haotian  and
+      Sch{\"u}tze, Hinrich},
+    editor = "Rambow, Owen  and
+      Wanner, Leo  and
+      Apidianaki, Marianna  and
+      Al-Khalifa, Hend  and
+      Eugenio, Barbara Di  and
+      Schockaert, Steven",
+    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
+    month = jan,
+    year = "2025",
+    address = "Abu Dhabi, UAE",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.coling-main.32/",
+    pages = "469--495",
+    abstract = "Transliterating related languages that use different scripts into a common script is effective for improving crosslingual transfer in downstream tasks. However, this methodology often makes pretraining a model from scratch unavoidable, as transliteration brings about new subwords not covered in existing multilingual pretrained language models (mPLMs). This is undesirable because it requires a large computation budget. A more promising way is to make full use of available mPLMs. To this end, this paper proposes a simple but effective framework: Transliterate-Merge-Initialize (TransMI). TransMI can create strong baselines for data that is transliterated into a common script by exploiting an existing mPLM and its tokenizer without any training. TransMI has three stages: (a) transliterate the vocabulary of an mPLM into a common script; (b) merge the new vocabulary with the original vocabulary; and (c) initialize the embeddings of the new subwords. We apply TransMI to three strong recent mPLMs. Our experiments demonstrate that TransMI not only preserves the mPLM`s ability to handle non-transliterated data, but also enables it to effectively process transliterated data, thereby facilitating crosslingual transfer across scripts. The results show consistent improvements of 3% to 34% for different mPLMs and tasks. We make our code and models publicly available.",
     abbr = {COLING 2025},
     code={https://github.com/cisnlp/TransMI}
 }
@@ -159,7 +188,6 @@
    abbr = {NAACL 2024},
    code = {https://github.com/cisnlp/ofa}
 }
-
 
 @inproceedings{liu-etal-2023-crosslingual-transfer,
     title = "Crosslingual Transfer Learning for Low-Resource Languages Based on Multilingual Colexification Graphs",
