@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: profile.jpg
+  image: profile3.jpg
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
@@ -22,7 +22,7 @@ social: false  # includes social icons at the bottom of the page
 [[Google Scholar]](https://scholar.google.com/citations?user=VjJUa5cAAAAJ&hl=en), [[Semantic Scholar]](https://www.semanticscholar.org/author/Yihong-Liu/2107995084), [[GitHub]](https://github.com/yihongL1U)  
   
   
-I am currently a third-year PhD student at the Center for Information and Language Processing (**CIS**) of University of Munich (**LMU Munich**), München, under Prof. Dr. Hinrich Schütze's supervision, focusing on natural language processing (**NLP**) and computational linguistics (**CL**).  
+I am currently a third-year PhD student at the Center for Information and Language Processing (**[CIS](https://www.cis.lmu.de/)**) of University of Munich (**LMU Munich**), München, under Prof. Dr. Hinrich Schütze's supervision, focusing on natural language processing (**NLP**) and computational linguistics (**CL**). I am also affiliated with Munich Center for Machine Learning (**[MCML](https://mcml.ai/)**).   
 
 Before pursuing my PhD degree, I obtained my master's degree in *Data Engineering and Analytics* at Technical University of Munich (**TUM**), München, and my bachelor's degree in *Computer Science and Technology* at Southwest University (**SWU**), Chongqing.  
 
@@ -31,6 +31,7 @@ Email: yihong\[at\]cis\[dot\]lmu\[dot\]de
 
 **Current research interests**:  
 - multilinguality
+- interpretability
 - large language models
 - parameter-efficient transfer learning
 - machine translation 
