@@ -4,6 +4,78 @@
 @string{aps = {American Physical Society,}}
 
 
+@article{wu2025mabsa,
+      title={M-ABSA: A Multilingual Dataset for Aspect-Based Sentiment Analysis}, 
+      author={Chengyan Wu and Bolei Ma and Yihong Liu and Zheyu Zhang and Ningyuan Deng and Yanshu Li and Baolan Chen and Yi Zhang and Barbara Plank and Yun Xue},
+      abstract={
+      Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.
+      },
+      year={2025},
+      arxiv={2502.11824},
+      abbr = {arXiv 2025},
+      code={https://github.com/swaggy66/M-ABSA}, 
+}
+
+@article{özeren2025hyperofa,
+      title={HYPEROFA: Expanding LLM Vocabulary to New Languages via Hypernetwork-Based Embedding Initialization}, 
+      author={Enes Özeren and Yihong Liu and Hinrich Schütze},
+      abstract={
+      Many pre-trained language models (PLMs) exhibit suboptimal performance on mid- and low-resource languages, largely due to limited exposure to these languages during pre-training. A common strategy to address this is to introduce new tokens specific to the target languages, initialize their embeddings, and apply continual pre-training on target-language data. Among such methods, OFA (Liu et al., 2024a) proposes a similarity-based subword embedding initialization heuristic that is both effective and efficient. However, OFA restricts target-language token embeddings to be convex combinations of a fixed number of source-language embeddings, which may limit expressiveness. To overcome this limitation, we propose HYPEROFA, a hypernetwork-based approach for more adaptive token embedding initialization. The hypernetwork is trained to map from an external multilingual word vector space to the PLMs token embedding space using source-language tokens. Once trained, it can generate flexible embeddings for target-language tokens, serving as a good starting point for continual pretraining. Experiments demonstrate that HYPEROFA consistently outperforms random initialization baseline and matches or exceeds the performance of OFA in both continual pre-training convergence and downstream task performance. We make the code publicly available.
+      },
+      year={2025},
+      arxiv={2504.21018},
+      abbr = {arXiv 2025},
+      code={https://github.com/enesozeren/hyper-ofa}, 
+}
+
+@article{wang2025lost,
+      title={Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models}, 
+      author={Mingyang Wang and Heike Adel and Lukas Lange and Yihong Liu and Ercong Nie and Jannik Strötgen and Hinrich Schütze},
+      abstract={
+      Multilingual language models (MLMs) store factual knowledge across languages but often struggle to provide consistent responses to semantically equivalent prompts in different languages. While previous studies point out this cross-lingual inconsistency issue, the underlying causes remain unexplored. In this work, we use mechanistic interpretability methods to investigate cross-lingual inconsistencies in MLMs. We find that MLMs encode knowledge in a language-independent concept space through most layers, and only transition to language-specific spaces in the final layers. Failures during the language transition often result in incorrect predictions in the target language, even when the answers are correct in other languages. To mitigate this inconsistency issue, we propose a linear shortcut method that bypasses computations in the final layers, enhancing both prediction accuracy and cross-lingual consistency. Our findings shed light on the internal mechanisms of MLMs and provide a lightweight, effective strategy for producing more consistent factual outputs.
+      },
+      year={2025},
+      arxiv={2504.04264},
+      abbr = {ACL 2025},
+      code={https://arxiv.org/abs/2504.04264}, 
+}
+
+@article{liu2025relations,
+      title={On Relation-Specific Neurons in Large Language Models}, 
+      author={Yihong Liu and Runsheng Chen and Lea Hirlimann and Ahmad Dawar Hakimi and Mingyang Wang and Amir Hossein Kargaran and Sascha Rothe and François Yvon and Hinrich Schütze},
+      abstract={
+      In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself -- independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the Llama-2 family on a chosen set of relations with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation r on the LLM's ability to handle (1) facts whose relation is r and (2) facts whose relation is a different relation r′≠r. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. (i) Neuron cumulativity. The neurons for r present a cumulative effect so that deactivating a larger portion of them results in the degradation of more facts in r. (ii) Neuron versatility. Neurons can be shared across multiple closely related as well as less related relations. Some relation neurons transfer across languages. (iii) Neuron interference. Deactivating neurons specific to one relation can improve LLM generation performance for facts of other relations. We will make our code publicly available at https://github.com/cisnlp/relation-specific-neurons.
+      },
+      year={2025},
+      arxiv={2502.17355},
+      abbr = {arXiv 2025},
+      code={https://github.com/cisnlp/relation-specific-neurons}, 
+}
+
+@article{pei2025understanding,
+      title={Understanding In-Context Machine Translation for Low-Resource Languages: A Case Study on Manchu}, 
+      author={Renhao Pei and Yihong Liu and Peiqin Lin and François Yvon and Hinrich Schütze},
+      abstract={
+      In-context machine translation (MT) with large language models (LLMs) is a promising approach for low-resource MT, as it can readily take advantage of linguistic resources such as grammar books and dictionaries. Such resources are usually selectively integrated into the prompt so that LLMs can directly perform translation without any specific training, via their in-context learning capability (ICL). However, the relative importance of each type of resource e.g., dictionary, grammar book, and retrieved parallel examples, is not entirely clear. To address this gap, this study systematically investigates how each resource and its quality affects the translation performance, with the Manchu language as our case study. To remove any prior knowledge of Manchu encoded in the LLM parameters and single out the effect of ICL, we also experiment with an encrypted version of Manchu texts. Our results indicate that high-quality dictionaries and good parallel examples are very helpful, while grammars hardly help. In a follow-up study, we showcase a promising application of in-context MT: parallel data augmentation as a way to bootstrap the conventional MT model. When monolingual data abound, generating synthetic parallel data through in-context MT offers a pathway to mitigate data scarcity and build effective and efficient low-resource neural MT systems.},
+      journal={arXiv preprint arXiv:2502.11862},
+      year={2025},
+      arxiv={2502.11862},
+      abbr = {ACL 2025},
+      code={https://github.com/cisnlp/manchu-in-context-mt}, 
+}
+
+@article{liu2025tracing,
+      title={Tracing Multilingual Factual Knowledge Acquisition in Pretraining}, 
+      author={Yihong Liu and Mingyang Wang and Amir Hossein Kargaran and Felicia Körner and Ercong Nie and Barbara Plank and François Yvon and Hinrich Schütze},
+      abstract={
+      Large Language Models (LLMs) are capable of recalling multilingual factual knowledge present in their pretraining data. However, most studies evaluate only the final model, leaving the development of factual recall and crosslingual consistency throughout pretraining largely unexplored. In this work, we trace how factual recall and crosslingual consistency evolve during pretraining, focusing on OLMo-7B as a case study. We find that both accuracy and consistency improve over time for most languages. We show that this improvement is primarily driven by the fact frequency in the pretraining corpus: more frequent facts are more likely to be recalled correctly, regardless of language. Yet, some low-frequency facts in non-English languages can still be correctly recalled. Our analysis reveals that these instances largely benefit from crosslingual transfer of their English counterparts -- an effect that emerges predominantly in the early stages of pretraining. We pinpoint two distinct pathways through which multilingual factual knowledge acquisition occurs: (1) frequency-driven learning, which is dominant and language-agnostic, and (2) crosslingual transfer, which is limited in scale and typically constrained to relation types involving named entities. We release our code and data to facilitate further research at https://github.com/cisnlp/multilingual-fact-tracing.},
+      journal={arXiv preprint arXiv:2505.14824},
+      year={2025},
+      arxiv={2505.14824},
+      abbr = {arXiv 2025},
+      code={https://github.com/cisnlp/multilingual-fact-tracing}
+}
+
 @article{liu2024langsamp,
   title={LangSAMP: Language-Script Aware Multilingual Pretraining},
   author={Liu, Yihong and Ye, Haotian and Ma, Chunlan and Wang, Mingyang and Sch{\"u}tze, Hinrich},
@@ -11,7 +83,7 @@
   year={2024},
   arxiv={2409.18199},
   abstract={Recent multilingual pretrained language models (mPLMs) often avoid using language embeddings -- learnable vectors assigned to different languages. These embeddings are discarded for two main reasons: (1) mPLMs are expected to have a single, unified parameter set across all languages, and (2) they need to function seamlessly as universal text encoders without requiring language IDs as input. However, this removal increases the burden on token embeddings to encode all language-specific information, which may hinder the model's ability to produce more language-neutral representations. To address this challenge, we propose Language-Script Aware Multilingual Pretraining (LangSAMP), a method that incorporates both language and script embeddings to enhance representation learning while maintaining a simple architecture. Specifically, we integrate these embeddings into the output of the transformer blocks before passing the final representations to the language modeling head for prediction. We apply LangSAMP to the continual pretraining of XLM-R on a highly multilingual corpus covering more than 500 languages. The resulting model consistently outperforms the baseline. Extensive analysis further shows that language/script embeddings encode language/script-specific information, which improves the selection of source languages for crosslingual transfer. We make our code and models publicly available at https://github.com/cisnlp/LangSAMP.},
-  abbr = {arXiv 2024},
+  abbr = {ACL 2025},
   code = {https://github.com/cisnlp/LangSAMP},
 }
 
