@@ -4,64 +4,16 @@
 @string{aps = {American Physical Society,}}
 
 
-@article{wu2025mabsa,
-      title={M-ABSA: A Multilingual Dataset for Aspect-Based Sentiment Analysis}, 
-      author={Chengyan Wu and Bolei Ma and Yihong Liu and Zheyu Zhang and Ningyuan Deng and Yanshu Li and Baolan Chen and Yi Zhang and Barbara Plank and Yun Xue},
-      abstract={
-      Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.
-      },
-      year={2025},
-      arxiv={2502.11824},
-      abbr = {arXiv 2025},
-      code={https://github.com/swaggy66/M-ABSA}, 
-}
-
-@article{özeren2025hyperofa,
-      title={HYPEROFA: Expanding LLM Vocabulary to New Languages via Hypernetwork-Based Embedding Initialization}, 
-      author={Enes Özeren and Yihong Liu and Hinrich Schütze},
-      abstract={
-      Many pre-trained language models (PLMs) exhibit suboptimal performance on mid- and low-resource languages, largely due to limited exposure to these languages during pre-training. A common strategy to address this is to introduce new tokens specific to the target languages, initialize their embeddings, and apply continual pre-training on target-language data. Among such methods, OFA (Liu et al., 2024a) proposes a similarity-based subword embedding initialization heuristic that is both effective and efficient. However, OFA restricts target-language token embeddings to be convex combinations of a fixed number of source-language embeddings, which may limit expressiveness. To overcome this limitation, we propose HYPEROFA, a hypernetwork-based approach for more adaptive token embedding initialization. The hypernetwork is trained to map from an external multilingual word vector space to the PLMs token embedding space using source-language tokens. Once trained, it can generate flexible embeddings for target-language tokens, serving as a good starting point for continual pretraining. Experiments demonstrate that HYPEROFA consistently outperforms random initialization baseline and matches or exceeds the performance of OFA in both continual pre-training convergence and downstream task performance. We make the code publicly available.
-      },
-      year={2025},
-      arxiv={2504.21018},
-      abbr = {arXiv 2025},
-      code={https://github.com/enesozeren/hyper-ofa}, 
-}
-
-@article{wang2025lost,
-      title={Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models}, 
-      author={Mingyang Wang and Heike Adel and Lukas Lange and Yihong Liu and Ercong Nie and Jannik Strötgen and Hinrich Schütze},
-      abstract={
-      Multilingual language models (MLMs) store factual knowledge across languages but often struggle to provide consistent responses to semantically equivalent prompts in different languages. While previous studies point out this cross-lingual inconsistency issue, the underlying causes remain unexplored. In this work, we use mechanistic interpretability methods to investigate cross-lingual inconsistencies in MLMs. We find that MLMs encode knowledge in a language-independent concept space through most layers, and only transition to language-specific spaces in the final layers. Failures during the language transition often result in incorrect predictions in the target language, even when the answers are correct in other languages. To mitigate this inconsistency issue, we propose a linear shortcut method that bypasses computations in the final layers, enhancing both prediction accuracy and cross-lingual consistency. Our findings shed light on the internal mechanisms of MLMs and provide a lightweight, effective strategy for producing more consistent factual outputs.
-      },
-      year={2025},
-      arxiv={2504.04264},
-      abbr = {ACL 2025},
-      code={https://arxiv.org/abs/2504.04264}, 
-}
-
-@article{liu2025relations,
-      title={On Relation-Specific Neurons in Large Language Models}, 
-      author={Yihong Liu and Runsheng Chen and Lea Hirlimann and Ahmad Dawar Hakimi and Mingyang Wang and Amir Hossein Kargaran and Sascha Rothe and François Yvon and Hinrich Schütze},
-      abstract={
-      In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself -- independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the Llama-2 family on a chosen set of relations with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation r on the LLM's ability to handle (1) facts whose relation is r and (2) facts whose relation is a different relation r′≠r. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. (i) Neuron cumulativity. The neurons for r present a cumulative effect so that deactivating a larger portion of them results in the degradation of more facts in r. (ii) Neuron versatility. Neurons can be shared across multiple closely related as well as less related relations. Some relation neurons transfer across languages. (iii) Neuron interference. Deactivating neurons specific to one relation can improve LLM generation performance for facts of other relations. We will make our code publicly available at https://github.com/cisnlp/relation-specific-neurons.
-      },
-      year={2025},
-      arxiv={2502.17355},
-      abbr = {arXiv 2025},
-      code={https://github.com/cisnlp/relation-specific-neurons}, 
-}
-
-@article{pei2025understanding,
-      title={Understanding In-Context Machine Translation for Low-Resource Languages: A Case Study on Manchu}, 
-      author={Renhao Pei and Yihong Liu and Peiqin Lin and François Yvon and Hinrich Schütze},
-      abstract={
-      In-context machine translation (MT) with large language models (LLMs) is a promising approach for low-resource MT, as it can readily take advantage of linguistic resources such as grammar books and dictionaries. Such resources are usually selectively integrated into the prompt so that LLMs can directly perform translation without any specific training, via their in-context learning capability (ICL). However, the relative importance of each type of resource e.g., dictionary, grammar book, and retrieved parallel examples, is not entirely clear. To address this gap, this study systematically investigates how each resource and its quality affects the translation performance, with the Manchu language as our case study. To remove any prior knowledge of Manchu encoded in the LLM parameters and single out the effect of ICL, we also experiment with an encrypted version of Manchu texts. Our results indicate that high-quality dictionaries and good parallel examples are very helpful, while grammars hardly help. In a follow-up study, we showcase a promising application of in-context MT: parallel data augmentation as a way to bootstrap the conventional MT model. When monolingual data abound, generating synthetic parallel data through in-context MT offers a pathway to mitigate data scarcity and build effective and efficient low-resource neural MT systems.},
-      journal={arXiv preprint arXiv:2502.11862},
-      year={2025},
-      arxiv={2502.11862},
-      abbr = {ACL 2025},
-      code={https://github.com/cisnlp/manchu-in-context-mt}, 
+@article{wang2025refusal,
+  title={Refusal direction is universal across safety-aligned languages},
+  author={Wang, Xinpeng and Wang, Mingyang and Liu, Yihong and Sch{\"u}tze, Hinrich and Plank, Barbara},
+  abstract={
+  Refusal mechanisms in large language models (LLMs) are essential for ensuring safety. Recent research has revealed that refusal behavior can be mediated by a single direction in activation space, enabling targeted interventions to bypass refusals. While this is primarily demonstrated in an English-centric context, appropriate refusal behavior is important for any language, but poorly understood. In this paper, we investigate the refusal behavior in LLMs across 14 languages using PolyRefuse, a multilingual safety dataset created by translating malicious and benign English prompts into these languages. We uncover the surprising cross-lingual universality of the refusal direction: a vector extracted from English can bypass refusals in other languages with near-perfect effectiveness, without any additional fine-tuning. Even more remarkably, refusal directions derived from any safety-aligned language transfer seamlessly to others. We attribute this transferability to the parallelism of refusal vectors across languages in the embedding space and identify the underlying mechanism behind cross-lingual jailbreaks. These findings provide actionable insights for building more robust multilingual safety defenses and pave the way for a deeper mechanistic understanding of cross-lingual vulnerabilities in LLMs.},
+  journal={arXiv preprint arXiv:2505.17306},
+  year={2025},
+  arxiv={2505.14824},
+  abbr = {arXiv 2025},
+  code={https://github.com/mainlp/Multilingual-Refusal}
 }
 
 @article{liu2025tracing,
@@ -76,15 +28,167 @@
       code={https://github.com/cisnlp/multilingual-fact-tracing}
 }
 
-@article{liu2024langsamp,
-  title={LangSAMP: Language-Script Aware Multilingual Pretraining},
-  author={Liu, Yihong and Ye, Haotian and Ma, Chunlan and Wang, Mingyang and Sch{\"u}tze, Hinrich},
-  journal={arXiv preprint arXiv:2409.18199},
-  year={2024},
-  arxiv={2409.18199},
-  abstract={Recent multilingual pretrained language models (mPLMs) often avoid using language embeddings -- learnable vectors assigned to different languages. These embeddings are discarded for two main reasons: (1) mPLMs are expected to have a single, unified parameter set across all languages, and (2) they need to function seamlessly as universal text encoders without requiring language IDs as input. However, this removal increases the burden on token embeddings to encode all language-specific information, which may hinder the model's ability to produce more language-neutral representations. To address this challenge, we propose Language-Script Aware Multilingual Pretraining (LangSAMP), a method that incorporates both language and script embeddings to enhance representation learning while maintaining a simple architecture. Specifically, we integrate these embeddings into the output of the transformer blocks before passing the final representations to the language modeling head for prediction. We apply LangSAMP to the continual pretraining of XLM-R on a highly multilingual corpus covering more than 500 languages. The resulting model consistently outperforms the baseline. Extensive analysis further shows that language/script embeddings encode language/script-specific information, which improves the selection of source languages for crosslingual transfer. We make our code and models publicly available at https://github.com/cisnlp/LangSAMP.},
-  abbr = {ACL 2025},
-  code = {https://github.com/cisnlp/LangSAMP},
+@article{liu2025relations,
+      title={On Relation-Specific Neurons in Large Language Models}, 
+      author={Yihong Liu and Runsheng Chen and Lea Hirlimann and Ahmad Dawar Hakimi and Mingyang Wang and Amir Hossein Kargaran and Sascha Rothe and François Yvon and Hinrich Schütze},
+      abstract={
+      In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself -- independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the Llama-2 family on a chosen set of relations with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation r on the LLM's ability to handle (1) facts whose relation is r and (2) facts whose relation is a different relation r′≠r. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. (i) Neuron cumulativity. The neurons for r present a cumulative effect so that deactivating a larger portion of them results in the degradation of more facts in r. (ii) Neuron versatility. Neurons can be shared across multiple closely related as well as less related relations. Some relation neurons transfer across languages. (iii) Neuron interference. Deactivating neurons specific to one relation can improve LLM generation performance for facts of other relations. We will make our code publicly available at https://github.com/cisnlp/relation-specific-neurons.
+      },
+      year={2025},
+      arxiv={2502.17355},
+      abbr = {arXiv 2025},
+      code={https://github.com/cisnlp/relation-specific-neurons}, 
+}
+
+@article{wu2025mabsa,
+      title={M-ABSA: A Multilingual Dataset for Aspect-Based Sentiment Analysis}, 
+      author={Chengyan Wu and Bolei Ma and Yihong Liu and Zheyu Zhang and Ningyuan Deng and Yanshu Li and Baolan Chen and Yi Zhang and Barbara Plank and Yun Xue},
+      abstract={
+      Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.
+      },
+      year={2025},
+      arxiv={2502.11824},
+      abbr = {arXiv 2025},
+      code={https://github.com/swaggy66/M-ABSA}, 
+}
+
+@inproceedings{feng-etal-2025-pretrained,
+    title = "Your Pretrained Model Tells the Difficulty Itself: A Self-Adaptive Curriculum Learning Paradigm for Natural Language Understanding",
+    author = "Feng, Qi  and
+      Liu, Yihong  and
+      Schuetze, Hinrich",
+    editor = "Zhao, Jin  and
+      Wang, Mingyang  and
+      Liu, Zhu",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-srw.15/",
+    pages = "222--239",
+    ISBN = "979-8-89176-254-1",
+    abstract = "Curriculum learning is a widely adopted training strategy in natural language processing (NLP), where models are exposed to examples organized by increasing difficulty to enhance learning efficiency and performance. However, most existing approaches rely on manually defined difficulty metrics {--} such as text length {--} which may not accurately reflect the model{'}s own perspective. To overcome this limitation, we present a self-adaptive curriculum learning paradigm that prioritizes fine-tuning examples based on difficulty scores predicted by pre-trained language models (PLMs) themselves. Building on these scores, we explore various training strategies that differ in the ordering of examples for the fine-tuning: from easy-to-hard, hard-to-easy, to mixed sampling. We evaluate our method on four natural language understanding (NLU) datasets covering both binary and multi-class classification tasks.Experimental results show that our approach leads to faster convergence and improved performance compared to standard random sampling.",
+    abbr = {ACL SRW 2025},
+    code={https://github.com/alitanokiki/self-adaptive-curriculum-nlu-acl2025}, 
+}
+
+@inproceedings{ozeren-etal-2025-hyperofa,
+    title = "{HYPEROFA}: Expanding {LLM} Vocabulary to New Languages via Hypernetwork-Based Embedding Initialization",
+    author = {{\"O}zeren, Enes  and
+      Liu, Yihong  and
+      Schuetze, Hinrich},
+    editor = "Zhao, Jin  and
+      Wang, Mingyang  and
+      Liu, Zhu",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-srw.6/",
+    pages = "79--96",
+    ISBN = "979-8-89176-254-1",
+    abstract = "Many pre-trained language models (PLMs) exhibit suboptimal performance on mid- and low-resource languages, largely due to limited exposure to these languages during pre-training. A common strategy to address this is to introduce new tokens specific to the target languages, initialize their embeddings, and apply continual pre-training on target-language data. Among such methods, OFA (Liu et al., 2024a) proposes a similarity-based subword embedding initialization heuristic that is both effective and efficient. However, OFA restricts target-language token embeddings to be convex combinations of a fixed number of source-language embeddings, which may limit expressiveness. To overcome this limitation, we propose HYPEROFA, a hypernetwork-based approach for more adaptive token embedding initialization. The hypernetwork is trained to map from an external multilingual word vector space to the PLM{'}s token embedding space using source-language tokens. Once trained, it can generate flexible embeddings for target-language tokens, serving as a good starting point for continual pretraining. Experiments demonstrate that HYPEROFA consistently outperforms random initialization baseline and matches or exceeds the performance of OFA in both continual pre-training convergence and downstream task performance. We make the code publicly available.",
+    abbr = {ACL SRW 2025},
+    code={https://github.com/enesozeren/hyper-ofa}, 
+}
+
+@inproceedings{kargaran-etal-2025-programming,
+    title = "How Programming Concepts and Neurons Are Shared in Code Language Models",
+    author = "Kargaran, Amir Hossein  and
+      Liu, Yihong  and
+      Yvon, Fran{\c{c}}ois  and
+      Schuetze, Hinrich",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.1379/",
+    pages = "26905--26917",
+    ISBN = "979-8-89176-256-5",
+    abstract = "Several studies have explored the mechanisms of large language models (LLMs) in coding tasks, but most have focused on programming languages (PLs) in a monolingual setting. In this paper, we investigate the relationship between multiple PLs and English in the concept space of LLMs. We perform a few-shot translation task on 21 PL pairs using two Llama-based models. By decoding the embeddings of intermediate layers during this task, we observe that the concept space is closer to English (including PL keywords) and assigns high probabilities to English tokens in the second half of the intermediate layers. We analyze neuron activations for 11 PLs and English, finding that while language-specific neurons are primarily concentrated in the bottom layers, those exclusive to each PL tend to appear in the top layers. For PLs that are highly aligned with multiple other PLs, identifying language-specific neurons is not feasible. These PLs also tend to have a larger keyword set than other PLs and are closer to the model{'}s concept space regardless of the input/output PL in the translation task. Our findings provide insights into how LLMs internally represent PLs, revealing structural patterns in the model{'}s concept space. Code is available at https://github.com/cisnlp/code-specific-neurons.",
+    abbr = {ACL 2025},
+    code={https://github.com/cisnlp/code-specific-neurons}, 
+}
+
+@inproceedings{wang-etal-2025-lost-multilinguality,
+    title = "Lost in Multilinguality: Dissecting Cross-lingual Factual Inconsistency in Transformer Language Models",
+    author = {Wang, Mingyang  and
+      Adel, Heike  and
+      Lange, Lukas  and
+      Liu, Yihong  and
+      Nie, Ercong  and
+      Str{\"o}tgen, Jannik  and
+      Schuetze, Hinrich},
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.253/",
+    pages = "5075--5094",
+    ISBN = "979-8-89176-251-0",
+    abstract = "Multilingual language models (MLMs) store factual knowledge across languages but often struggle to provide consistent responses to semantically equivalent prompts in different languages. While previous studies point out this cross-lingual inconsistency issue, the underlying causes remain unexplored. In this work, we use mechanistic interpretability methods to investigate cross-lingual inconsistencies in MLMs. We find that MLMs encode knowledge in a language-independent concept space through most layers, and only transition to language-specific spaces in the final layers. Failures during the language transition often result in incorrect predictions in the target language, even when the answers are correct in other languages. To mitigate this inconsistency issue, we propose a linear shortcut method that bypasses computations in the final layers, enhancing both prediction accuracy and cross-lingual consistency. Our findings shed light on the internal mechanisms of MLMs and provide a lightweight, effective strategy for producing more consistent factual outputs.",
+    abbr = {ACL 2025},
+    code={https://arxiv.org/abs/2504.04264}, 
+}
+
+@inproceedings{pei-etal-2025-understanding,
+    title = "Understanding In-Context Machine Translation for Low-Resource Languages: A Case Study on {M}anchu",
+    author = "Pei, Renhao  and
+      Liu, Yihong  and
+      Lin, Peiqin  and
+      Yvon, Fran{\c{c}}ois  and
+      Schuetze, Hinrich",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.429/",
+    pages = "8767--8788",
+    ISBN = "979-8-89176-251-0",
+    abstract = "In-context machine translation (MT) with large language models (LLMs) is a promising approach for low-resource MT, as it can readily take advantage of linguistic resources such as grammar books and dictionaries.Such resources are usually selectively integrated into the prompt so that LLMs can directly perform translation without any specific training, via their in-context learning capability (ICL).However, the relative importance of each type of resource, e.g., dictionary, grammar book, and retrieved parallel examples, is not entirely clear.To address this gap, this study systematically investigates how each resource and its quality affect the translation performance, with the Manchu language as our case study. To remove any prior knowledge of Manchu encoded in the LLM parameters and single out the effect of ICL, we also experiment with an enciphered version of Manchu texts.Our results indicate that high-quality dictionaries and good parallel examples are very helpful, while grammars hardly help.In a follow-up study, we showcase a promising application of in-context MT: parallel data augmentation as a way to bootstrap a conventional MT model. When monolingual data abound, generating synthetic parallel data through in-context MT offers a pathway to mitigate data scarcity and build effective and efficient low-resource neural MT systems.",
+    abbr = {ACL 2025},
+    code={https://github.com/cisnlp/manchu-in-context-mt}, 
+}
+
+@inproceedings{liu-etal-2025-langsamp,
+    title = "{L}ang{SAMP}: Language-Script Aware Multilingual Pretraining",
+    author = "Liu, Yihong  and
+      Ye, Haotian  and
+      Ma, Chunlan  and
+      Wang, Mingyang  and
+      Schuetze, Hinrich",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.88/",
+    pages = "1743--1770",
+    ISBN = "979-8-89176-251-0",
+    abstract = "Recent multilingual pretrained language models (mPLMs) often avoid using language embeddings {--} learnable vectors assigned to individual languages. However, this places a significant burden on token representations to encode all language-specific information, which may hinder language neutrality. To address this limitation, we propose Language-Script Aware Multilingual Pretraining (LangSAMP), a method that incorporates both language and script embeddings to enhance representation learning. Specifically, we integrate these embeddings into the output of the Transformer blocks before passing the final representations to the language modeling head for prediction. We apply LangSAMP to the continual pretraining of XLM-R on a highly multilingual corpus covering more than 500 languages. The resulting model consistently outperforms the baseline in zero-shot crosslingual transfer across diverse downstream tasks. Extensive analysis reveals that language and script embeddings capture language- and script-specific nuances, which benefits more language-neutral representations, proven by improved pairwise cosine similarity. In our case study, we also show that language and script embeddings can be used to select better source languages for crosslingual transfer. We make our code and models publicly available at \url{https://github.com/cisnlp/LangSAMP}.",
+    abbr = {ACL 2025},
+    code = {https://github.com/cisnlp/LangSAMP},
 }
 
 @inproceedings{liu-etal-2025-transliterations,

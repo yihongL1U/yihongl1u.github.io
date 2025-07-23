@@ -12,11 +12,15 @@ nav_order: 5
 - ConceptExplorer: A Dynamic Frontend for Concept Visualization and Indexing with Django (with Yuxuan Zahed)  
 - How Multilingual are Existing Multilingual Benchmark Datasets? A Systematic Investigation (with Jiahao Lu)  
 - Breaking the Script Barrier: Improving Cross-Lingual Transfer in Multilingual Models (with Orgest Xhelili, published in [EMNLP 2024](https://arxiv.org/pdf/2406.19759))  
+- Understanding In-Context Machine Translation for Low-Resource Languages: A Case Study on Manchu (with Renhao Pei, published in [ACL 2025](https://arxiv.org/pdf/2502.11862))
+- Detecting MultiLingual Relation Specific Neurons in LLM (with Runshen Chen, published in [Arxiv 2025](https://arxiv.org/pdf/2502.17355))
+- Prioritized Training on Worth-Learning Samples with Your Pretrained Model (with Qi Feng, published in [ACL SRW 2025](https://arxiv.org/pdf/2507.09758))
+- Language-Specific Concepts in LLMs: Tracing Paths Through Latent Language (with Nicolas Hoffmann)
 
-### Available topics:
+<!-- ### Available topics:
 - [Why Crosslingual Alignment Fails for Better Crosslingual Transfer](https://cisnlp.github.io/thesis_proposals/2024/Yihong-2024-Project-3.pdf)  
 - [End-to-End Autoregressive Pixel Models of Generation in Text Space](https://cisnlp.github.io/thesis_proposals/2024/Yihong-2024-Project-4.pdf)  
-  
+ -->  
 
 
 ## Colloquium und Repetitorium zu Computerlinguistisches Arbeiten (Colloquium and Repetitorium on Computational Linguistics)
