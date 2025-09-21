@@ -129,7 +129,7 @@ function submitAll() {
     source: item.source,
     judgment: results[i]
   }));
-  fetch("http://<your-server-ip>:8080/submit", {
+  fetch("http://35.204.37.60:8080/submit", {  // ✅ updated server IP
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ language: selectedLang, responses: submission })
