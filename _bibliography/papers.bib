@@ -4,7 +4,7 @@
 @string{aps = {American Physical Society,}}
 
 
-@article{wang2025refusal,
+@inproceedings{wang2025refusal,
   title={Refusal direction is universal across safety-aligned languages},
   author={Wang, Xinpeng and Wang, Mingyang and Liu, Yihong and Sch{\"u}tze, Hinrich and Plank, Barbara},
   abstract={
@@ -12,44 +12,95 @@
   journal={arXiv preprint arXiv:2505.17306},
   year={2025},
   arxiv={2505.14824},
-  abbr = {arXiv 2025},
+  abbr = {NeurIPS 2025},
   code={https://github.com/mainlp/Multilingual-Refusal}
 }
 
-@article{liu2025tracing,
-      title={Tracing Multilingual Factual Knowledge Acquisition in Pretraining}, 
-      author={Yihong Liu and Mingyang Wang and Amir Hossein Kargaran and Felicia Körner and Ercong Nie and Barbara Plank and François Yvon and Hinrich Schütze},
-      abstract={
-      Large Language Models (LLMs) are capable of recalling multilingual factual knowledge present in their pretraining data. However, most studies evaluate only the final model, leaving the development of factual recall and crosslingual consistency throughout pretraining largely unexplored. In this work, we trace how factual recall and crosslingual consistency evolve during pretraining, focusing on OLMo-7B as a case study. We find that both accuracy and consistency improve over time for most languages. We show that this improvement is primarily driven by the fact frequency in the pretraining corpus: more frequent facts are more likely to be recalled correctly, regardless of language. Yet, some low-frequency facts in non-English languages can still be correctly recalled. Our analysis reveals that these instances largely benefit from crosslingual transfer of their English counterparts -- an effect that emerges predominantly in the early stages of pretraining. We pinpoint two distinct pathways through which multilingual factual knowledge acquisition occurs: (1) frequency-driven learning, which is dominant and language-agnostic, and (2) crosslingual transfer, which is limited in scale and typically constrained to relation types involving named entities. We release our code and data to facilitate further research at https://github.com/cisnlp/multilingual-fact-tracing.},
-      journal={arXiv preprint arXiv:2505.14824},
-      year={2025},
-      arxiv={2505.14824},
-      abbr = {arXiv 2025},
-      code={https://github.com/cisnlp/multilingual-fact-tracing}
+@inproceedings{liu-etal-2025-tracing,
+    title = "Tracing Multilingual Factual Knowledge Acquisition in Pretraining",
+    author = {Liu, Yihong  and
+      Wang, Mingyang  and
+      Kargaran, Amir Hossein  and
+      K{\"o}rner, Felicia  and
+      Nie, Ercong  and
+      Plank, Barbara  and
+      Yvon, Fran{\c{c}}ois  and
+      Schuetze, Hinrich},
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2025",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-emnlp.113/",
+    doi = "10.18653/v1/2025.findings-emnlp.113",
+    pages = "2121--2146",
+    ISBN = "979-8-89176-335-7",
+    abstract = "Large Language Models (LLMs) are capable of recalling multilingual factual knowledge present in their pretraining data. However, most studies evaluate only the final model, leaving the development of factual recall and crosslingual consistency throughout pretraining largely unexplored. In this work, we trace how factual recall and crosslingual consistency evolve during pretraining, focusing on OLMo-7B as a case study. We find that both accuracy and consistency improve over time for most languages. We show that this improvement is primarily driven by the fact frequency in the pretraining corpus: more frequent facts are more likely to be recalled correctly, regardless of language. Yet, some low-frequency facts in non-English languages can still be correctly recalled. Our analysis reveals that these instances largely benefit from crosslingual transfer of their English counterparts {--} an effect that emerges predominantly in the early stages of pretraining. We pinpoint two distinct pathways through which multilingual factual knowledge acquisition occurs: (1) frequency-driven learning, which is dominant and language-agnostic, and (2) crosslingual transfer, which is limited in scale and typically constrained to relation types involving named entities. We release our code and data to facilitate further research at \url{https://github.com/cisnlp/multilingual-fact-tracing}.",
+    abbr = {EMNLP 2025},
+    code={https://github.com/cisnlp/multilingual-fact-tracing}
 }
 
-@article{liu2025relations,
-      title={On Relation-Specific Neurons in Large Language Models}, 
-      author={Yihong Liu and Runsheng Chen and Lea Hirlimann and Ahmad Dawar Hakimi and Mingyang Wang and Amir Hossein Kargaran and Sascha Rothe and François Yvon and Hinrich Schütze},
-      abstract={
-      In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself -- independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the Llama-2 family on a chosen set of relations with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation r on the LLM's ability to handle (1) facts whose relation is r and (2) facts whose relation is a different relation r′≠r. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. (i) Neuron cumulativity. The neurons for r present a cumulative effect so that deactivating a larger portion of them results in the degradation of more facts in r. (ii) Neuron versatility. Neurons can be shared across multiple closely related as well as less related relations. Some relation neurons transfer across languages. (iii) Neuron interference. Deactivating neurons specific to one relation can improve LLM generation performance for facts of other relations. We will make our code publicly available at https://github.com/cisnlp/relation-specific-neurons.
-      },
-      year={2025},
-      arxiv={2502.17355},
-      abbr = {arXiv 2025},
-      code={https://github.com/cisnlp/relation-specific-neurons}, 
+@inproceedings{liu-etal-2025-relation-specific,
+    title = "On Relation-Specific Neurons in Large Language Models",
+    author = "Liu, Yihong  and
+      Chen, Runsheng  and
+      Hirlimann, Lea  and
+      Hakimi, Ahmad Dawar  and
+      Wang, Mingyang  and
+      Kargaran, Amir Hossein  and
+      Rothe, Sascha  and
+      Yvon, Fran{\c{c}}ois  and
+      Schuetze, Hinrich",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.52/",
+    doi = "10.18653/v1/2025.emnlp-main.52",
+    pages = "992--1022",
+    ISBN = "979-8-89176-332-6",
+    abstract = "In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While factual knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself {--} independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the LLama-2 family on a chosen set of relations, with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation $r$ on the LLM{'}s ability to handle (1) facts involving relation $r$ and (2) facts involving a different relation $r' \neq r$. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. $\textbf{(i) Neuron cumulativity.}$ Multiple neurons jointly contribute to processing facts involving relation $r$, with no single neuron fully encoding a fact in $r$ on its own. $\textbf{(ii) Neuron versatility.}$ Neurons can be shared across multiple closely related as well as less related relations. In addition, some relation neurons transfer across languages. $\textbf{(iii) Neuron interference.}$ Deactivating neurons specific to one relation can improve LLMs' factual recall performance for facts of other relations. We make our code and data publicly available at \url{https://github.com/cisnlp/relation-specific-neurons}.",
+    abbr = {EMNLP 2025},
+    code={https://github.com/cisnlp/relation-specific-neurons}, 
 }
 
-@article{wu2025mabsa,
-      title={M-ABSA: A Multilingual Dataset for Aspect-Based Sentiment Analysis}, 
-      author={Chengyan Wu and Bolei Ma and Yihong Liu and Zheyu Zhang and Ningyuan Deng and Yanshu Li and Baolan Chen and Yi Zhang and Barbara Plank and Yun Xue},
-      abstract={
-      Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.
-      },
-      year={2025},
-      arxiv={2502.11824},
-      abbr = {arXiv 2025},
-      code={https://github.com/swaggy66/M-ABSA}, 
+@inproceedings{wu-etal-2025-absa,
+    title = "{M}-{ABSA}: A Multilingual Dataset for Aspect-Based Sentiment Analysis",
+    author = "Wu, ChengYan  and
+      Ma, Bolei  and
+      Liu, Yihong  and
+      Zhang, Zheyu  and
+      Deng, Ningyuan  and
+      Li, Yanshu  and
+      Chen, Baolan  and
+      Zhang, Yi  and
+      Xue, Yun  and
+      Plank, Barbara",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.128/",
+    doi = "10.18653/v1/2025.emnlp-main.128",
+    pages = "2530--2557",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.",
+    abbr = {EMNLP 2025},
+    code={https://github.com/swaggy66/M-ABSA},
 }
 
 @inproceedings{feng-etal-2025-pretrained,
@@ -243,14 +294,32 @@
     code = {https://github.com/Loreley99/SynthEval_CheckList}
 }
 
-@article{ma2024exploring,
-  title={Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-Latin Scripts},
-  author={Ma, Chunlan and Liu, Yihong and Ye, Haotian and Sch{\"u}tze, Hinrich},
-  journal={arXiv preprint arXiv:2407.02320},
-  year={2024},
-  arxiv={2407.02320},
-  abstract={Decoder-only large language models (LLMs) excel in high-resource languages across various tasks through few-shot or even zero-shot in-context learning (ICL). However, their performance often does not transfer well to low-resource languages, especially those written in non-Latin scripts. Inspired by recent work that leverages transliteration in encoder-only models, we investigate whether transliteration is also effective in improving LLMs' performance for low-resource languages written in non-Latin scripts. To this end, we propose three prompt templates, where the target-language text is represented in (1) its original script, (2) Latin script, or (3) both. We apply these methods to several representative LLMs of different sizes on various tasks including text classification and sequential labeling. Our findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25%).},
-  abbr = {arXiv 2024}
+@inproceedings{ma-etal-2025-exploring-role,
+    title = "Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-{L}atin Scripts",
+    author = "Ma, Chunlan  and
+      Liu, Yihong  and
+      Ye, Haotian  and
+      Schuetze, Hinrich",
+    editor = "Adelani, David Ifeoluwa  and
+      Arnett, Catherine  and
+      Ataman, Duygu  and
+      Chang, Tyler A.  and
+      Gonen, Hila  and
+      Raja, Rahul  and
+      Schmidt, Fabian  and
+      Stap, David  and
+      Wang, Jiayi",
+    booktitle = "Proceedings of the 5th Workshop on Multilingual Representation Learning (MRL 2025)",
+    month = nov,
+    year = "2025",
+    address = "Suzhuo, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.mrl-main.27/",
+    doi = "10.18653/v1/2025.mrl-main.27",
+    pages = "397--410",
+    ISBN = "979-8-89176-345-6",
+    abstract = "Decoder-only large language models (LLMs) excel in high-resource languages across various tasks through few-shot or even zero-shot in-context learning (ICL). However, their performance often does not transfer well to low-resource languages, especially those written in non-Latin scripts. Inspired by recent work that leverages transliteration in encoder-only models, we investigate whether transliteration is also effective in improving LLMs' performance for low-resource languages written in non-Latin scripts. To this end, we propose three prompt templates, where the target-language text is represented in (1) its original script, (2) Latin script transliteration, or (3) combined. We apply these methods to several representative LLMs of different sizes on various tasks including text classification and sequential labeling. Our findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25{\%}{\%}).",
+    abbr = {MRL 2025}
 }
 
 @inproceedings{xhelili-etal-2024-breaking,
