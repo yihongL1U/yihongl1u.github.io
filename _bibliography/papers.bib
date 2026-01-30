@@ -41,6 +41,7 @@
     ISBN = "979-8-89176-335-7",
     abstract = "Large Language Models (LLMs) are capable of recalling multilingual factual knowledge present in their pretraining data. However, most studies evaluate only the final model, leaving the development of factual recall and crosslingual consistency throughout pretraining largely unexplored. In this work, we trace how factual recall and crosslingual consistency evolve during pretraining, focusing on OLMo-7B as a case study. We find that both accuracy and consistency improve over time for most languages. We show that this improvement is primarily driven by the fact frequency in the pretraining corpus: more frequent facts are more likely to be recalled correctly, regardless of language. Yet, some low-frequency facts in non-English languages can still be correctly recalled. Our analysis reveals that these instances largely benefit from crosslingual transfer of their English counterparts {--} an effect that emerges predominantly in the early stages of pretraining. We pinpoint two distinct pathways through which multilingual factual knowledge acquisition occurs: (1) frequency-driven learning, which is dominant and language-agnostic, and (2) crosslingual transfer, which is limited in scale and typically constrained to relation types involving named entities. We release our code and data to facilitate further research at \url{https://github.com/cisnlp/multilingual-fact-tracing}.",
     abbr = {EMNLP 2025},
+    selected={true},
     code={https://github.com/cisnlp/multilingual-fact-tracing}
 }
 
@@ -70,6 +71,7 @@
     ISBN = "979-8-89176-332-6",
     abstract = "In large language models (LLMs), certain neurons can store distinct pieces of knowledge learned during pretraining. While factual knowledge typically appears as a combination of relations and entities, it remains unclear whether some neurons focus on a relation itself {--} independent of any entity. We hypothesize such neurons detect a relation in the input text and guide generation involving such a relation. To investigate this, we study the LLama-2 family on a chosen set of relations, with a statistics-based method. Our experiments demonstrate the existence of relation-specific neurons. We measure the effect of selectively deactivating candidate neurons specific to relation $r$ on the LLM{'}s ability to handle (1) facts involving relation $r$ and (2) facts involving a different relation $r' \neq r$. With respect to their capacity for encoding relation information, we give evidence for the following three properties of relation-specific neurons. $\textbf{(i) Neuron cumulativity.}$ Multiple neurons jointly contribute to processing facts involving relation $r$, with no single neuron fully encoding a fact in $r$ on its own. $\textbf{(ii) Neuron versatility.}$ Neurons can be shared across multiple closely related as well as less related relations. In addition, some relation neurons transfer across languages. $\textbf{(iii) Neuron interference.}$ Deactivating neurons specific to one relation can improve LLMs' factual recall performance for facts of other relations. We make our code and data publicly available at \url{https://github.com/cisnlp/relation-specific-neurons}.",
     abbr = {EMNLP 2025},
+    selected={true},
     code={https://github.com/cisnlp/relation-specific-neurons}, 
 }
 
@@ -101,48 +103,6 @@
     abstract = "Aspect-based sentiment analysis (ABSA) is a crucial task in information extraction and sentiment analysis, aiming to identify aspects with associated sentiment elements in text. However, existing ABSA datasets are predominantly English-centric, limiting the scope for multilingual evaluation and research. To bridge this gap, we present M-ABSA, a comprehensive dataset spanning 7 domains and 21 languages, making it the most extensive multilingual parallel dataset for ABSA to date. Our primary focus is on triplet extraction, which involves identifying aspect terms, aspect categories, and sentiment polarities. The dataset is constructed through an automatic translation process with human review to ensure quality. We perform extensive experiments using various baselines to assess performance and compatibility on M-ABSA. Our empirical findings highlight that the dataset enables diverse evaluation tasks, such as multilingual and multi-domain transfer learning, and large language model evaluation, underscoring its inclusivity and its potential to drive advancements in multilingual ABSA research.",
     abbr = {EMNLP 2025},
     code={https://github.com/swaggy66/M-ABSA},
-}
-
-@inproceedings{feng-etal-2025-pretrained,
-    title = "Your Pretrained Model Tells the Difficulty Itself: A Self-Adaptive Curriculum Learning Paradigm for Natural Language Understanding",
-    author = "Feng, Qi  and
-      Liu, Yihong  and
-      Schuetze, Hinrich",
-    editor = "Zhao, Jin  and
-      Wang, Mingyang  and
-      Liu, Zhu",
-    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
-    month = jul,
-    year = "2025",
-    address = "Vienna, Austria",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.acl-srw.15/",
-    pages = "222--239",
-    ISBN = "979-8-89176-254-1",
-    abstract = "Curriculum learning is a widely adopted training strategy in natural language processing (NLP), where models are exposed to examples organized by increasing difficulty to enhance learning efficiency and performance. However, most existing approaches rely on manually defined difficulty metrics {--} such as text length {--} which may not accurately reflect the model{'}s own perspective. To overcome this limitation, we present a self-adaptive curriculum learning paradigm that prioritizes fine-tuning examples based on difficulty scores predicted by pre-trained language models (PLMs) themselves. Building on these scores, we explore various training strategies that differ in the ordering of examples for the fine-tuning: from easy-to-hard, hard-to-easy, to mixed sampling. We evaluate our method on four natural language understanding (NLU) datasets covering both binary and multi-class classification tasks.Experimental results show that our approach leads to faster convergence and improved performance compared to standard random sampling.",
-    abbr = {ACL SRW 2025},
-    code={https://github.com/alitanokiki/self-adaptive-curriculum-nlu-acl2025}, 
-}
-
-@inproceedings{ozeren-etal-2025-hyperofa,
-    title = "{HYPEROFA}: Expanding {LLM} Vocabulary to New Languages via Hypernetwork-Based Embedding Initialization",
-    author = {{\"O}zeren, Enes  and
-      Liu, Yihong  and
-      Schuetze, Hinrich},
-    editor = "Zhao, Jin  and
-      Wang, Mingyang  and
-      Liu, Zhu",
-    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
-    month = jul,
-    year = "2025",
-    address = "Vienna, Austria",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.acl-srw.6/",
-    pages = "79--96",
-    ISBN = "979-8-89176-254-1",
-    abstract = "Many pre-trained language models (PLMs) exhibit suboptimal performance on mid- and low-resource languages, largely due to limited exposure to these languages during pre-training. A common strategy to address this is to introduce new tokens specific to the target languages, initialize their embeddings, and apply continual pre-training on target-language data. Among such methods, OFA (Liu et al., 2024a) proposes a similarity-based subword embedding initialization heuristic that is both effective and efficient. However, OFA restricts target-language token embeddings to be convex combinations of a fixed number of source-language embeddings, which may limit expressiveness. To overcome this limitation, we propose HYPEROFA, a hypernetwork-based approach for more adaptive token embedding initialization. The hypernetwork is trained to map from an external multilingual word vector space to the PLM{'}s token embedding space using source-language tokens. Once trained, it can generate flexible embeddings for target-language tokens, serving as a good starting point for continual pretraining. Experiments demonstrate that HYPEROFA consistently outperforms random initialization baseline and matches or exceeds the performance of OFA in both continual pre-training convergence and downstream task performance. We make the code publicly available.",
-    abbr = {ACL SRW 2025},
-    code={https://github.com/enesozeren/hyper-ofa}, 
 }
 
 @inproceedings{kargaran-etal-2025-programming,
@@ -238,6 +198,7 @@
     pages = "1743--1770",
     ISBN = "979-8-89176-251-0",
     abstract = "Recent multilingual pretrained language models (mPLMs) often avoid using language embeddings {--} learnable vectors assigned to individual languages. However, this places a significant burden on token representations to encode all language-specific information, which may hinder language neutrality. To address this limitation, we propose Language-Script Aware Multilingual Pretraining (LangSAMP), a method that incorporates both language and script embeddings to enhance representation learning. Specifically, we integrate these embeddings into the output of the Transformer blocks before passing the final representations to the language modeling head for prediction. We apply LangSAMP to the continual pretraining of XLM-R on a highly multilingual corpus covering more than 500 languages. The resulting model consistently outperforms the baseline in zero-shot crosslingual transfer across diverse downstream tasks. Extensive analysis reveals that language and script embeddings capture language- and script-specific nuances, which benefits more language-neutral representations, proven by improved pairwise cosine similarity. In our case study, we also show that language and script embeddings can be used to select better source languages for crosslingual transfer. We make our code and models publicly available at \url{https://github.com/cisnlp/LangSAMP}.",
+    selected={true},
     abbr = {ACL 2025},
     code = {https://github.com/cisnlp/LangSAMP},
 }
@@ -292,34 +253,6 @@
     abstract = "Traditional benchmarking in NLP typically involves using static, held-out test sets and calculating aggregated statistics based on diverse examples. However, this approach often results in an overestimation of performance and lacks the ability to offer comprehensive, interpretable, and dynamic assessments of NLP models. Recently, works like DynaBench and Checklist have addressed these limitations through behavioral testing of NLP models with test types generated by a multi-step human-annotated pipeline. Unfortunately, manually creating a variety of test types requires significant human labor, thus weakening efficiency. In this work, we propose SynthEval, a hybrid behavioral testing framework that leverages large language models (LLMs) to generate a wide range of test types for a comprehensive evaluation of NLP models. The SynthEval framework first generates sentences via LLMs using controlled generation, and then identifies challenging examples by comparing the predictions made by LLMs with task-specific NLP models. In the last stage, human experts investigate the challenging examples, manually design templates, and identify the types of failures the task-specific models consistently exhibit. We apply SynthEval to two classification tasks and show that our framework is effective in identifying weaknesses of strong models on these tasks.",
     abbr = {EMNLP 2024},
     code = {https://github.com/Loreley99/SynthEval_CheckList}
-}
-
-@inproceedings{ma-etal-2025-exploring-role,
-    title = "Exploring the Role of Transliteration in In-Context Learning for Low-resource Languages Written in Non-{L}atin Scripts",
-    author = "Ma, Chunlan  and
-      Liu, Yihong  and
-      Ye, Haotian  and
-      Schuetze, Hinrich",
-    editor = "Adelani, David Ifeoluwa  and
-      Arnett, Catherine  and
-      Ataman, Duygu  and
-      Chang, Tyler A.  and
-      Gonen, Hila  and
-      Raja, Rahul  and
-      Schmidt, Fabian  and
-      Stap, David  and
-      Wang, Jiayi",
-    booktitle = "Proceedings of the 5th Workshop on Multilingual Representation Learning (MRL 2025)",
-    month = nov,
-    year = "2025",
-    address = "Suzhuo, China",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.mrl-main.27/",
-    doi = "10.18653/v1/2025.mrl-main.27",
-    pages = "397--410",
-    ISBN = "979-8-89176-345-6",
-    abstract = "Decoder-only large language models (LLMs) excel in high-resource languages across various tasks through few-shot or even zero-shot in-context learning (ICL). However, their performance often does not transfer well to low-resource languages, especially those written in non-Latin scripts. Inspired by recent work that leverages transliteration in encoder-only models, we investigate whether transliteration is also effective in improving LLMs' performance for low-resource languages written in non-Latin scripts. To this end, we propose three prompt templates, where the target-language text is represented in (1) its original script, (2) Latin script transliteration, or (3) combined. We apply these methods to several representative LLMs of different sizes on various tasks including text classification and sequential labeling. Our findings show that the effectiveness of transliteration varies by task type and model size. For instance, all models benefit from transliterations for sequential labeling (with increases of up to 25{\%}{\%}).",
-    abbr = {MRL 2025}
 }
 
 @inproceedings{xhelili-etal-2024-breaking,
@@ -388,30 +321,6 @@
     code={https://github.com/cisnlp/TransliCo}
 }
 
-@inproceedings{ye-etal-2024-mosecrot,
-    title = "{M}o{SEC}ro{T}: Model Stitching with Static Word Embeddings for Crosslingual Zero-shot Transfer",
-    author = {Ye, Haotian  and
-      Liu, Yihong  and
-      Ma, Chunlan  and
-      Sch{\"u}tze, Hinrich},
-    editor = "Tafreshi, Shabnam  and
-      Akula, Arjun  and
-      Sedoc, Jo{\~a}o  and
-      Drozd, Aleksandr  and
-      Rogers, Anna  and
-      Rumshisky, Anna",
-    booktitle = "Proceedings of the Fifth Workshop on Insights from Negative Results in NLP",
-    month = jun,
-    year = "2024",
-    address = "Mexico City, Mexico",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.insights-1.1",
-    doi = "10.18653/v1/2024.insights-1.1",
-    pages = "1--7",
-    abstract = "Transformer-based pre-trained language models (PLMs) have achieved remarkable performance in various natural language processing (NLP) tasks. However, pre-training such models can take considerable resources that are almost only available to high-resource languages. On the contrary, static word embeddings are easier to train in terms of computing resources and the amount of data required. In this paper, we introduce MoSECroT (Model Stitching with Static Word Embeddings for Crosslingual Zero-shot Transfer, a novel and challenging task that is especially relevant to low-resource languages for which static word embeddings are available. To tackle the task, we present the first framework that leverages relative representations to construct a common space for the embeddings of a source language PLM and the static word embeddings of a target language. In this way, we can train the PLM on source-language training data and perform zero-shot transfer to the target language by simply swapping the embedding layer. However, through extensive experiments on two classification datasets, we show that although our proposed framework is competitive with weak baselines when addressing MoSECroT, it fails to achieve competitive results compared with some strong baselines. In this paper, we attempt to explain this negative result and provide several thoughts on possible improvement.",
-    abbr = {Insights 2024}
-}
-
 @inproceedings{liu-etal-2024-ofa,
     title = "{OFA}: A Framework of Initializing Unseen Subword Embeddings for Efficient Large-scale Multilingual Continued Pretraining",
     author = "Liu, Yihong  and
@@ -456,16 +365,6 @@
     selected={true},
     abbr = {EMNLP 2023},
     code = {https://github.com/cisnlp/ColexificationNet}
-}
-
-@article{ye2023study,
-  title={A study of conceptual language similarity: comparison and evaluation},
-  author={Ye, Haotian and Liu, Yihong and Sch{\"u}tze, Hinrich},
-  journal={arXiv preprint arXiv:2305.13401},
-  year={2023},
-  arxiv={2305.13401},
-  abstract={An interesting line of research in natural language processing (NLP) aims to incorporate linguistic typology to bridge linguistic diversity and assist the research of low-resource languages. While most works construct linguistic similarity measures based on lexical or typological features, such as word order and verbal inflection, recent work has introduced a novel approach to defining language similarity based on how they represent basic concepts, which is complementary to existing similarity measures. In this work, we study the conceptual similarity in detail and evaluate it extensively on a binary classification task.},
-  abbr = {arXiv 2023}
 }
 
 @inproceedings{liu-etal-2023-crosslingual,
