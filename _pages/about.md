@@ -21,7 +21,7 @@ social: false  # includes social icons at the bottom of the page
 
 [[Google Scholar]](https://scholar.google.com/citations?user=VjJUa5cAAAAJ&hl=en), [[Semantic Scholar]](https://www.semanticscholar.org/author/Yihong-Liu/2107995084), [[GitHub]](https://github.com/yihongL1U)  
 
-I am currently a postdoctoral researcher at the Center for Information and Language Processing  (**[CIS](https://www.cis.lmu.de/)**) of University of Munich (**[LMU Munich](https://www.lmu.de/en/)**), München, working on natural language processing (NLP), large language models (LLMs), and multilingual NLP.I am also affiliated with Munich Center for Machine Learning (**[MCML](https://mcml.ai/)**).
+I am currently a postdoctoral researcher at the Center for Information and Language Processing  (**[CIS](https://www.cis.lmu.de/)**) of University of Munich (**[LMU Munich](https://www.lmu.de/en/)**), München, working on natural language processing (NLP), large language models (LLMs), and multilingual NLP. I am also affiliated with Munich Center for Machine Learning (**[MCML](https://mcml.ai/)**).
 
 Before becoming a postdoc, I completed my PhD at CIS, LMU Munich, under the supervision of nder **[Prof. Dr. Hinrich Schütze](https://scholar.google.com/citations?user=qIL9dWUAAAAJ&hl=en)**. Prior to that, I obtained my master's degree in Data Engineering and Analytics from the Technical University of Munich (**[TUM](https://www.tum.de/en/?r=1)**), Munich, and my bachelor's degree in Computer Science and Technology from Southwest University (**[SWU](https://www.swu.edu.cn/)**), Chongqing.
 
