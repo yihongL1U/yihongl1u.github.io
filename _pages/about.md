@@ -27,6 +27,9 @@ Before becoming a postdoc, I completed my PhD at CIS, LMU Munich, under the supe
 
 Email: yihong\[at\]cis\[dot\]lmu\[dot\]de  
 
+## Collaboration & Supervision
+
+Starting in **December 2026**, I plan to supervise **2–3 master's students** on research projects in **multilingual NLP**. If you are highly motivated and interested in working with me, please [reach out by email](mailto:yihong@cis.lmu.de)!
 
 **Current research interests**:  
 - multilinguality
