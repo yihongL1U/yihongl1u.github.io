@@ -29,6 +29,8 @@ Email: yihong\[at\]cis\[dot\]lmu\[dot\]de
 
 ## Collaboration & Supervision
 
+I welcome collaborations in **multilingual NLP and beyond**. If you have an exciting idea, a fresh perspective, or a challenging problem you'd like to explore together, I'd love to [hear from you](mailto:yihong@cis.lmu.de)!
+
 Starting in **December 2026**, I plan to supervise **2–3 master's students** on research projects in **multilingual NLP**. If you are highly motivated and interested in working with me, please [reach out by email](mailto:yihong@cis.lmu.de)!
 
 **Current research interests**:  
